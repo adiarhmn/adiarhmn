@@ -1,0 +1,28 @@
+{
+  "name": "adiauliarahman-portofolio",
+  "version": "1.0.0",
+  "description": "Personal Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiarhmn/adiarhmn.git"
+  },
+  "keywords": [
+    "Web",
+    "Portofolio"
+  ],
+  "author": "Adi Aulia Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adiarhmn/adiarhmn/issues"
+  },
+  "homepage": "https://github.com/adiarhmn/adiarhmn#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
