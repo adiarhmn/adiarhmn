@@ -23,6 +23,7 @@
   "homepage": "https://github.com/adiarhmn/adiarhmn#readme",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
+    "feather-icons": "^4.29.2",
     "tailwindcss": "^4.1.13"
   }
 }

@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@layer base {
+  .font-space-mono {
+    font-family: "Space Mono", monospace;
+  }
+
+  .font-sarpanch {
+    font-family: "Sarpanch", sans-serif;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    color: white;
+  }
+
+  .hacker-animation {
+    animation: hacker 3s infinite;
+    color: #00ff00;
+    font-family: "Space Mono", monospace;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+
+  @keyframes hacker {
+    0%,
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+    50% {
+      opacity: 0.5;
+      text-shadow: 0 0 2px #00ff00, 0 0 5px #00ff00, 0 0 10px #00ff00;
+    }
+  }
+}

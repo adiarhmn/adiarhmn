@@ -4,20 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- SEO (Search Engine Optimization) -->
+    <meta name="description" content="Personal website of Adi Aulia Rahman">
+    <meta name="keywords" content="Adi Aulia Rahman, web developer, projects">
+    <meta name="author" content="Adi Aulia Rahman">
+    <title>
+        Adi Aulia Rahman - Personal Website
+    </title>
+
+    <!-- My Copyright -->
+    <!-- <link rel="icon" type="image/png" href="./assets/images/favicon.png"> -->
+    <meta name="copyright" content="&copy; 2024 Adi Aulia Rahman. All rights reserved.">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="English">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
     <link href="./assets/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+
+    <style>
+        @keyframes spin-slow {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+    </style>
+
+
 </head>
 
-<body>
-    <h1 class="text-3xl font-bold underline text-blue-600">
-        Hi I'm Adi Aulia Rahman!
-    </h1>
-    <a href="./my-projects.html">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            My Projects
-        </button>
-    </a>
+<body class="bg-black">
+    <div class="container relative mx-auto max-w-7xl">
+        <!-- Start Background-assets -->
+        <div>
+            <div
+                class="fixed left-1/2 -top-1/12 -translate-1/2 w-[1500px] h-[800px] bg-radial from-emerald-600/30 to-black/5 rounded-full blur-2xl animate-blob animation-delay-500 -z-10">
+            </div>
+            <div
+                class="fixed left-1/2 -top-1/12 -translate-1/2 w-[800px] h-[800px] bg-transparent rounded-full border border-emerald-500/30 -z-10">
+            </div>
+            <div
+                class="fixed left-1/2 -top-1/12 -translate-1/2 w-[1200px] h-[1200px] bg-transparent rounded-full border border-emerald-500/20 -z-10">
+            </div>
+
+            <div
+                class="fixed left-1/2 -top-1/12 -translate-1/2 w-[1300px] h-[1300px] opacity-30 font-space-mono text-xs -z-10">
+                <svg viewBox="0 0 200 200" class="w-full h-full animate-spin-slow">
+                    <!-- Path lingkaran -->
+                    <defs>
+                        <path id="circlePath" d="M 100,100 m 75,0 a 75,75 0 1,0 -150,0 a 75,75 0 1,0 150,0" />
+
+                        <!-- Gradient hijau -->
+                        <linearGradient id="greenGradient" gradientTransform="rotate(90)">
+                            <stop offset="0%" stop-color="#4ade80" /> <!-- hijau muda -->
+                            <stop offset="100%" stop-color="#166534" /> <!-- hijau tua -->
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Teks mengikuti lingkaran -->
+                    <text font-size="5" fill="url(#greenGradient)">
+                        <textPath href="#circlePath" startOffset="0%">
+                            Adi Aulia Rahman • Web Developer • Programmer ---
+                            Adi Aulia Rahman • Web Developer • Programmer ---
+                            Adi Aulia Rahman • Web Developer • Programmer ---
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <!-- End Background-assets -->
+
+        <!-- Start Navigation -->
+        <nav class="w-full fixed top-3 left-0">
+            <div
+                class=" relative flex items-center justify-between bg-black/10 px-10 py-5 max-w-7xl mx-auto rounded-lg backdrop-blur-2xl border border-slate-400/20">
+                <div class="absolute w-full h-px bg-gradient-to-r from-transparent via-slate-400/80 to-transparent top-0 left-0"></div>
+                <div class="absolute w-full h-px bg-gradient-to-r from-transparent via-slate-400/80 to-transparent bottom-0 left-0"></div>
+                <div id="logo" class="text-white">
+                    <a href="./index.html" title="Home"
+                        class="text-2xl font-sarpanch font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-800">
+                        ADIAR
+                    </a>
+                </div>
+
+                <!-- Sub-Navigation -->
+                <ul class="nav-links font-space-mono">
+                    <li class="nav-item active">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./my-projects.html">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about-me.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navigation -->
+
+
+        <!--  Start Main Content -->
+        <main id="content">
+            <section class="h-min-screen">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white text-center mt-40">
+                    Hi I'm Adi Aulia Rahman!
+                </h1>
+                <div class="text-center mt-10">
+                    <a href="./my-projects.html">
+                        <button
+                            class="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
+                            My Projects
+                        </button>
+                    </a>
+                </div>
+            </section>
+            <section class="mt-32 p-5 min-h-screen">
+                <div
+                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-blue-500/40 border">
+                    <i class="devicon-typescript-plain colored"></i>
+                    Typscript
+                </div>
+                <div
+                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-yellow-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-yellow-500/40 border">
+                    <i class="devicon-javascript-plain colored"></i>
+                    Javascript
+                </div>
+                <div
+                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-sky-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-sky-500/40 border">
+                    <i class="devicon-react-original colored"></i>
+                    React
+                </div>
+                <div
+                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-green-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-green-500/40 border">
+                    <i class="devicon-nodejs-plain colored"></i>
+                    Node.js
+                </div>
+
+
+                <h2 class="text-2xl font-bold text-white mb-4">Welcome to My Personal Website</h2>
+                <p class="text-white mb-4">
+                    Hello! I'm Adi Aulia Rahman, a passionate web developer. This is my personal website where I
+                    showcase my projects and share a bit about myself.
+                </p>
+                <a href="./my-projects.html" class="text-blue-400 hover:underline">Check out my projects!</a>
+            </section>
+        </main>
+        <!-- End Main Content -->
+
+        <!-- Start Footer -->
+        <footer class="mt-10 p-5 bg-white/20 rounded-lg text-center text-white">
+            <p>&copy; 2024 Adi Aulia Rahman. All rights reserved.</p>
+        </footer>
+        <!-- End Footer -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js" defer></script>
+
 </body>
 
 </html>
