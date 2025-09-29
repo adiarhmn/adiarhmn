@@ -62,6 +62,9 @@
         .glitch-text {
             position: relative;
             z-index: 2;
+            text-shadow: 0 0 5px rgb(14, 195, 135), 0 0 15px rgb(22, 168, 97);
+
+
             /* Ensure it stays above the rain effect */
         }
 
@@ -75,8 +78,8 @@
             animation: glitch 2s infinite;
             clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
             transform: translate(-2px, -2px);
-            color: rgb(108, 255, 164);
-            text-shadow: 0 0 5px rgb(44, 254, 72), 0 0 15px rgb(142, 255, 85);
+            color: rgb(67, 255, 180);
+            text-shadow: 0 0 5px rgb(44, 254, 184), 0 0 15px rgb(85, 255, 173);
         }
 
         /* Glitch effect for the text */
@@ -103,7 +106,7 @@
 
 </head>
 
-<body class="bg-black">
+<body class="bg-black antialiased">
     <div class="container relative mx-auto max-w-7xl">
         <!-- Start Background-assets -->
         <div>
@@ -147,30 +150,23 @@
         <!-- Start Navigation -->
         <nav class="w-full fixed top-3 left-0 px-5 z-50">
             <div
-                class=" relative flex items-center justify-between bg-black/10 px-5 py-3 lg:px-10 lg:py-5 max-w-7xl mx-auto rounded-lg backdrop-blur-2xl border border-slate-400/20">
+                class=" relative flex items-center justify-center bg-black/10 px-5 py-3 lg:px-10 lg:py-5 max-w-7xl mx-auto rounded-lg backdrop-blur-2xl border border-slate-400/20">
                 <div
                     class="absolute w-full h-px bg-gradient-to-r from-transparent via-slate-400/80 to-transparent top-0 left-0">
                 </div>
                 <div
                     class="absolute w-full h-px bg-gradient-to-r from-transparent via-slate-400/80 to-transparent bottom-0 left-0">
                 </div>
-                <div id="logo" class="text-white">
-                    <a href="./index.html" title="Home"
-                        class="text-2xl font-sarpanch font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-800">
-                        ADIAR
-                    </a>
-                </div>
-
                 <!-- Sub-Navigation -->
-                <ul class="nav-links font-space-mono hidden lg:flex">
+                <ul class="nav-links font-space-mono flex text-xs md:text-lg gap-6">
                     <li class="nav-item active">
                         <a href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./my-projects.html">My Projects</a>
+                        <a href="./about-me.html">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./about-me.html">About Me</a>
+                        <a href="./my-projects.html">My Projects</a>
                     </li>
                     <li class="nav-item">
                         <a href="./contact.html">Contact</a>
@@ -183,7 +179,7 @@
 
         <!--  Start Main Content -->
         <main id="content">
-            <section class="h-min-screen mt-40 h-screen">
+            <section class="h-min-screen pt-40 h-screen">
 
                 <!-- Badge Im Programmer -->
                 <div
@@ -208,17 +204,12 @@
                             Aulia Rahman</span>!
                     </h1>
                     <div
-                        class="absolute -z-10 top-2 left-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white/30 text-center leading-tight">
+                        class="absolute -z-10 top-1 md:top-2 left-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white/30 text-center leading-tight">
                         Hi I'm <span
                             class="text-transparent text-nowrap bg-gradient-to-b from-emerald-400/30 to-green-800/30 bg-clip-text">Adi
                             Aulia Rahman</span>!
                     </div>
                 </div>
-
-
-                <!-- <div class="matrix-container">
-                    <h1 class="matrix-text" data-text="MATRIX">MATRIX</h1>
-                </div> -->
 
                 <!-- Sub-Title -->
                 <div>
@@ -230,7 +221,7 @@
 
                 <div class="text-center mt-20 flex justify-center items-center gap-4">
                     <a href="./my-projects.html">
-                        <button style="stroke-linecap: butt"
+                        <button
                             class="relative min-w-44 bg-gradient-to-b border border-emerald-500 from-emerald-600 to-green-900 text-white px-6 py-3 rounded font-space-mono font-semibold hover:from-emerald-600 hover:to-green-900 transition duration-300">
                             <div
                                 class="absolute w-44 h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent top-0 left-1/2 -translate-1/2">
@@ -258,94 +249,237 @@
 
 
             <!-- Start - About Me Section -->
-            <section id="about-me">
+            <section id="about-me" class="px-5">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
-                    <p class="text-white/70 max-w-2xl mx-auto">
-                        I'm Adi Aulia Rahman, a dedicated web developer with a passion for creating dynamic and
-                        user-friendly websites. With a strong foundation in both front-end and back-end technologies,
-                        I strive to deliver high-quality solutions that meet client needs and exceed expectations.
+                    <h2 class="text-3xl font-bold text-white glitch-text" data-text="About Me">About Me</h2>
+                    <p class="text-white/70 max-w-2xl mx-auto text-xs md:text-lg">
+                        Get to know more about me, my skills, and what I do.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10 items-start">
-                    <!-- Me -->
-                    <div
-                        class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs text-white p-10 rounded-lg border border-gray-800 mt-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mt-1 items-start">
+                    <div class=" lg:col-span-7">
+                        <!-- Summary -->
                         <div
-                            class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
+                            class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs p-5 md:p-10 rounded-lg border border-gray-800 mt-10 text-justify text-white">
+                            <div
+                                class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-center md:text-start">Summary</h3>
+                            <div class="flex gap-2 flex-wrap md:flex-nowrap items-center justify-center">
+                                <div>
+                                    <img src="./assets/images/profile.jpg" alt="Profile Picture"
+                                        class="w-36 h-36 min-w-36 rounded-full ">
+                                </div>
+                                <p class="text-xs md:text-sm text-white/70">
+                                    A graduate of the Associate Degree in Information Technology from Politeknik Negeri
+                                    Tanah Laut with experience in developing web and mobile applications using PHP,
+                                    Laravel,
+                                    CodeIgniter 4, React JS, and MySQL. Experienced in academic and organizational
+                                    projects
+                                    such as Teaching Factory, livestock investment system development, and e-commerce
+                                    applications. Motivated to continuously learn new technologies and contribute to the
+                                    development of effective and beneficial IT solutions.
+                                </p>
+                            </div>
                         </div>
+
+                        <!-- My Skills -->
                         <div
-                            class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
-                        </div>
-                        <div
-                            class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
-                        </div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nam vitae, odit consequuntur
-                        aliquid
-                        optio perferendis itaque repudiandae dignissimos porro, corrupti natus adipisci ducimus
-                        corporis.
-                        Iste, non. Necessitatibus minus dicta corporis architecto impedit neque delectus unde quis
-                        sapiente,
-                        aperiam, pariatur autem explicabo. Ipsam vitae, libero itaque distinctio, quibusdam tempore quia
-                        temporibus maiores dicta est magnam facilis officiis unde incidunt voluptatibus consequatur
-                        veritatis cupiditate ullam eius aspernatur sed quasi earum? Eum nisi cum veritatis blanditiis
-                        vero
-                        illum facilis itaque maxime accusantium vel architecto, necessitatibus consequatur ab cumque
-                        sapiente hic debitis rerum libero fugit perspiciatis velit quibusdam corrupti minima. Magnam
-                        sequi
-                        harum, nam accusantium debitis assumenda itaque atque iure adipisci sed repellat libero unde
-                        rerum
-                        fuga a est minus quae, consequatur dignissimos! Ipsam qui voluptates placeat, nihil recusandae
-                        quos,
-                        explicabo accusantium molestias sed ducimus culpa. Cum illum accusamus temporibus accusantium
-                        dicta,
-                        iure, fugiat, cupiditate ducimus reprehenderit harum ab suscipit? Non, a reprehenderit?
+                            class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs p-5 md:p-10 rounded-lg border border-gray-800 mt-5 text-justify text-white">
+                            <div
+                                class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">My Skills</h3>
+
+                            <div class="flex gap-1 flex-wrap justify-center">
+
+                                <!-- HTML -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-orange-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-orange-500/40 border text-sm font-mono">
+                                    <i class="devicon-html5-plain colored"></i>
+                                    HTML
+                                </div>
+
+
+                                <!-- CSS -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-blue-500/40 border text-sm font-mono">
+                                    <i class="devicon-css3-plain colored"></i>
+                                    CSS
+                                </div>
+
+                                <!-- Javascript -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-yellow-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-yellow-500/40 border text-sm font-mono">
+                                    <i class="devicon-javascript-plain colored"></i>
+                                    Javascript
+                                </div>
+
+                                <!-- Typescript -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-blue-500/40 border text-sm font-mono">
+                                    <i class="devicon-typescript-plain colored"></i>
+                                    Typescript
+                                </div>
+
+                                <!-- React JS -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-sky-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-sky-500/40 border text-sm font-mono">
+                                    <i class="devicon-react-original colored"></i>
+                                    React JS
+                                </div>
+
+                                <!-- Node JS -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-green-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-green-500/40 border text-sm font-mono">
+                                    <i class="devicon-nodejs-plain colored"></i>
+                                    Node JS
+                                </div>
+
+                                <!-- PHP -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-purple-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-purple-500/40 border text-sm font-mono">
+                                    <i class="devicon-php-plain colored"></i>
+                                    PHP
+                                </div>
+
+                                <!-- Laravel -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-red-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-red-500/40 border text-sm font-mono">
+                                    <i class="devicon-laravel-plain colored"></i>
+                                    Laravel
+                                </div>
+
+                                <!-- Codeigniter -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-red-600/20 to-black/20 p-2 px-3 rounded-full w-fit border-red-600/40 border text-sm font-mono">
+                                    <i class="devicon-codeigniter-plain colored"></i>
+                                    CodeIgniter
+                                </div>
+
+                                <!-- Tailwind CSS -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-sky-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-sky-500/40 border text-sm font-mono">
+                                    <i class="devicon-tailwindcss-plain colored"></i>
+                                    Tailwind CSS
+                                </div>
+
+                                <!-- Bootstrap -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-purple-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-purple-500/40 border text-sm font-mono">
+                                    <i class="devicon-bootstrap-plain colored"></i>
+                                    Bootstrap
+                                </div>
+
+
+                                <!-- Android -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-green-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-green-500/40 border text-sm font-mono">
+                                    <i class="devicon-android-plain colored"></i>
+                                    Android
+                                </div>
+
+                                <!-- Capacitor -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-blue-500/40 border text-sm font-mono">
+                                    <i class="devicon-capacitor-plain colored"></i>
+                                    Capacitor
+                                </div>
+
+                                <!-- MySQL -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-blue-500/40 border text-sm font-mono">
+                                    <i class="devicon-mysql-plain colored"></i>
+                                    MySQL
+                                </div>
+
+                                <!-- GIT -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-red-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-red-500/40 border text-sm font-mono">
+                                    <i class="devicon-git-plain colored"></i>
+                                    GIT
+                                </div>
+
+                                <!-- UI UX -->
+                                <div
+                                    class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-purple-500/20 to-black/20 p-2 px-3 rounded-full w-fit border-purple-500/40 border text-sm font-mono">
+                                    <i class="devicon-figma-plain colored"></i>
+                                    Figma
+                                </div>
+
+
+                            </div>
+                        </div> // My Skill Container - End
                     </div>
 
-                    <!-- My Skills etc -->
-                    <div
-                        class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs text-white p-10 rounded-lg border border-gray-800 mt-10">
+                    <div class="lg:col-span-5">
+                        <!-- Education -->
                         <div
-                            class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
-                        </div>
-                        <div
-                            class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
-                        </div>
-                        <div
-                            class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
+                            class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs text-white p-5 lg:p-10 rounded-lg border border-gray-800 md:mt-10">
+                            <div
+                                class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
+                            </div>
+                            <div
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-4">Education</h3>
+                            <div class="text-white/70 text-xs md:text-sm space-y-4">
+                                <div class="flex items-center">
+                                    <div class="politala-logo w-20 h-20 min-w-20 mask-r-from-0% opacity-80"></div>
+                                    <div class="-ml-4">
+                                        <strong>Associate Degree in Information Technology</strong><br>
+                                        Politeknik Negeri Tanah Laut<br>
+                                        <em>Graduated: 2025, GPA: 3.96/4</em>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="sma-logo w-20 h-20 min-w-20 mask-r-from-0% opacity-80"></div>
+                                    <div class="-ml-4">
+                                        <strong>UPTD SMA NEGERI 1 PELAIHARI</strong><br>
+                                        Mathematics and Science<br>
+                                        <em>Jul 2019 - Jun 2022, Score: 85.93/100</em>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- My Skills etc -->
-                        <h3 class="text-2xl font-bold mb-4">My Skills</h3>
-                        <div class="flex flex-wrap gap-2">
+                        <div
+                            class="relative bg-gradient-to-b from-emerald-400/20 to-black/10 backdrop-blur-xs text-white p-10 rounded-lg border border-gray-800 mt-5">
                             <div
-                                class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-blue-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-blue-500/40 border">
-                                <i class="devicon-typescript-plain colored"></i>
-                                Typscript
+                                class="absolute w-full h-px bg-gradient-to-l from-transparent via-emerald-400/80 to-transparent top-0 left-0">
                             </div>
                             <div
-                                class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-yellow-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-yellow-500/40 border">
-                                <i class="devicon-javascript-plain colored"></i>
-                                Javascript
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 left-0">
                             </div>
                             <div
-                                class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-sky-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-sky-500/40 border">
-                                <i class="devicon-react-original colored"></i>
-                                React
+                                class="absolute w-px h-full bg-gradient-to-b from-transparent via-slate-400/80 to-transparent top-0 right-0">
                             </div>
-                            <div
-                                class="text-white flex items-center gap-1 mb-6 bg-gradient-to-b from-green-500/20 to-black/20 p-3 px-6 rounded-full w-fit border-green-500/40 border">
-                                <i class="devicon-nodejs-plain colored"></i>
-                                Node.js
+
+                            <!-- My Skills etc -->
+                            <h3 class="text-2xl font-bold mb-4">My Skills</h3>
+                            <div class="flex flex-wrap gap-2">
+
+
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-                <div>
-                    <img src="./assets/images/profile.jpg" alt="Profile Picture"
-                        class="w-48 h-48 rounded-full mx-auto mt-10 border-4 border-emerald-500/30">
                 </div>
             </section>
             <!-- End - About Me Section -->

@@ -5,6 +5,17 @@
     font-family: "Space Mono", monospace;
   }
 
+  .politala-logo {
+    background-image: url("../images/logo_politala.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .sma-logo {
+    background-image: url("../images/logo_sma1.png");
+    background-size: cover;
+    background-position: center;
+  }
+
   .font-sarpanch {
     font-family: "Sarpanch", sans-serif;
   }
