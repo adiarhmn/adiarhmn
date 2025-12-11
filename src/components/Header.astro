@@ -1,6 +1,8 @@
 ---
 // Tidak perlu props untuk sekarang
 // import { useState } from 'astro/jsx-runtime';
+
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <header class="fixed inset-x-0 top-0 bg-gray-100/90 backdrop-blur-md shadow z-50">
@@ -13,11 +15,11 @@
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex gap-7 font-medium">
-      <li><a class="hover:text-blue-600" href="/">Home</a></li>
-      <li><a class="hover:text-blue-600" href="/about">About Me</a></li>
-      <li><a class="hover:text-blue-600" href="/contact">Contact Me</a></li>
-      <li><a class="hover:text-blue-600" href="/projects">Projects</a></li>
-      <li><a class="hover:text-blue-600" href="/blog">Blog</a></li>
+      <li><a class="hover:text-blue-600" href={`${BASE_URL}`}>Home</a></li>
+      <li><a class="hover:text-blue-600" href={`${BASE_URL}/about`}>About Me</a></li>
+      <li><a class="hover:text-blue-600" href={`${BASE_URL}/contact`}>Contact Me</a></li>
+      <li><a class="hover:text-blue-600" href={`${BASE_URL}/projects`}>Projects</a></li>
+      <li><a class="hover:text-blue-600" href={`${BASE_URL}/blog`}>Blog</a></li>
     </ul>
 
     <!-- Mobile Toggle -->
