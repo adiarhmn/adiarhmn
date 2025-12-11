@@ -1,0 +1,42 @@
+---
+import CardProject from '../components/CardProject.astro';
+import Layout from '../layouts/Layout.astro'
+
+const projects = [
+  {
+    title: 'Aplikasi Investasi Ternak',
+    year: 'Des 2024 – Jul 2025',
+    desc: 'Mobile app full-stack (React TS & Laravel), integrasi payment gateway, dan sudah dirilis di Google Play Store.',
+    image: '/projects/investasi-ternak.jpg',
+  },
+  {
+    title: 'Website Penelitian Eduwisata TOGA',
+    year: 'Okt 2024 – Jan 2025',
+    desc: 'Website penelitian berbasis Laravel, serta kontribusi penulisan buku penelitian.',
+    image: '/projects/eduwisata-toga.jpg',
+  },
+  {
+    title: 'Marketplace Politala',
+    year: 'Okt 2024 – Jan 2025',
+    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
+    image: '/projects/ict-marketplace/tim.jpeg',
+    link: '/projects/ict-marketplace',
+  },
+];
+---
+
+<Layout>
+  <section class="py-20 bg-gray-50">
+    <h2
+      class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block"
+    >
+      MY PROJECTS
+    </h2>
+
+    <div
+      class="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      {projects.map((project) => <CardProject {...project} />)}
+    </div>
+  </section>
+</Layout>

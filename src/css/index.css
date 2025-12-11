@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@utility font-anton {
+  font-family: 'Anton', sans-serif;
+}
+
+@utility font-dmono {
+  font-family: 'DM Mono', monospace;
+}

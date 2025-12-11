@@ -1,0 +1,136 @@
+---
+const skillsFrontend = [
+  { name: 'HTML', icon: 'devicon-html5-plain' },
+  { name: 'CSS', icon: 'devicon-css3-plain' },
+  { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+  { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+  { name: 'React JS', icon: 'devicon-react-original' },
+  { name: 'Next JS', icon: 'devicon-nextjs-plain' },
+  { name: 'Vue JS', icon: 'devicon-vuejs-plain' },
+  { name: 'Svelte', icon: 'devicon-svelte-plain' },
+  { name: 'Bootstrap', icon: 'devicon-bootstrap-plain' },
+  { name: 'TailwindCSS', icon: 'devicon-tailwindcss-plain' },
+  { name: 'Sass', icon: 'devicon-sass-original' },
+]
+
+const skillsBackend = [
+  { name: 'PHP', icon: 'devicon-php-plain' },
+  { name: 'Laravel', icon: 'devicon-laravel-plain' },
+  { name: 'Livewire', icon: 'devicon-livewire-plain' },
+  { name: 'NodeJS', icon: 'devicon-nodejs-plain' },
+  { name: 'Express JS', icon: 'devicon-express-original' },
+  { name: 'CodeIgniter', icon: 'devicon-codeigniter-plain' },
+  { name: 'NestJS', icon: 'devicon-nestjs-plain' },
+  { name: 'Prisma ORM', icon: 'devicon-prisma-plain' },
+]
+
+const skillsMobile = [
+  { name: 'Ionic', icon: 'devicon-ionic-original' },
+  { name: 'Capacitor', icon: 'devicon-capacitor-plain' },
+]
+
+const skillsDatabase = [
+  { name: 'MySQL', icon: 'devicon-mysql-plain' },
+  { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
+  { name: 'Redis', icon: 'devicon-redis-plain' },
+]
+
+const skillsTools = [
+  { name: 'Git', icon: 'devicon-git-plain' },
+  { name: 'VSCode', icon: 'devicon-vscode-plain' },
+  { name: 'Android Studio', icon: 'devicon-androidstudio-plain' },
+  { name: 'ESLint', icon: 'devicon-eslint-plain' },
+]
+
+const skillsUIUX = [{ name: 'Figma', icon: 'devicon-figma-plain' }]
+---
+
+<div>
+  <h2 class="font-anton text-3xl uppercase border-b-2 mt-10">MY Skills</h2>
+
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+    <!-- FRONTEND -->
+    <section>
+      <h2 class="font-anton text-md uppercase">Frontend</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsFrontend.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- BACKEND -->
+    <section>
+      <h2 class="font-anton text-md uppercase">Backend</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsBackend.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- MOBILE -->
+    <section>
+      <h2 class="font-anton text-md uppercase">Mobile Development</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsMobile.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- DATABASE -->
+    <section>
+      <h2 class="font-anton text-md uppercase">Database</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsDatabase.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section>
+      <h2 class="font-anton text-md uppercase">Tools & Others</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsTools.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- UI/UX -->
+    <section>
+      <h2 class="font-anton text-md uppercase">UI / UX</h2>
+      <div class="py-5 flex flex-wrap gap-4">
+        {
+          skillsUIUX.map((skill) => (
+            <div class="p-3 w-14 bg-gray-200 flex items-center justify-center rounded aspect-square">
+              <i class={`text-3xl ${skill.icon}`} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</div>

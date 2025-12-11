@@ -1,0 +1,47 @@
+---
+// Tidak perlu props untuk sekarang
+// import { useState } from 'astro/jsx-runtime';
+---
+
+<header class="fixed inset-x-0 top-0 bg-gray-100/90 backdrop-blur-md shadow z-50">
+  <nav class="mx-auto w-full lg:w-5xl md:max-w-5xl p-5 border-b-2 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="/" class="font-anton uppercase text-2xl underline">
+      Adi Aulia Rahman
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-7 font-medium">
+      <li><a class="hover:text-blue-600" href="/">Home</a></li>
+      <li><a class="hover:text-blue-600" href="/about">About Me</a></li>
+      <li><a class="hover:text-blue-600" href="/contact">Contact Me</a></li>
+      <li><a class="hover:text-blue-600" href="/projects">Projects</a></li>
+      <li><a class="hover:text-blue-600" href="/blog">Blog</a></li>
+    </ul>
+
+    <!-- Mobile Toggle -->
+    <button
+      id="menuBtn"
+      class="md:hidden flex flex-col gap-1.5 cursor-pointer"
+      aria-label="Toggle Menu"
+      onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+    >
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-gray-100 border-b shadow">
+    <ul class="flex flex-col gap-5 px-5 py-4 font-medium">
+      <li><a class="block hover:underline" href="/">Home</a></li>
+      <li><a class="block hover:underline" href="/about">About Me</a></li>
+      <li><a class="block hover:underline" href="/contact">Contact Me</a></li>
+      <li><a class="block hover:underline" href="/projects">Projects</a></li>
+      <li><a class="block hover:underline" href="/blog">Blog</a></li>
+    </ul>
+  </div>
+</header>
