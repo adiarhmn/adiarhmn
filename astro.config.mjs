@@ -2,8 +2,8 @@
 import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 
-// const BASE_URL = '/adiarhmn';
-const BASE_URL = '';
+const BASE_URL = '/';
+// const BASE_URL = '/adiauliarahman.dev/';
 
 // const URL = 'https://adiarhmn.github.io';
 const URL = "https://adiauliarahman.dev/"

@@ -4,6 +4,7 @@ import Skill from '../components/Skill.astro'
 import Footer from '../components/Footer.astro'
 import Layout from '../layouts/Layout.astro'
 import MyProjects from '../components/MyProjects.astro'
+import { topProjects } from '../data/projects'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -35,7 +36,7 @@ import MyProjects from '../components/MyProjects.astro'
     </div>
   </div>
 
-  <MyProjects />
+  <MyProjects projects={topProjects} />
   <Experience />
   <Skill />
 </Layout>

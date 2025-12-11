@@ -5,9 +5,12 @@
 const BASE_URL = import.meta.env.BASE_URL
 ---
 
-<header class="fixed inset-x-0 top-0 bg-gray-100/90 backdrop-blur-md shadow z-50">
-  <nav class="mx-auto w-full lg:w-5xl md:max-w-5xl p-5 border-b-2 flex items-center justify-between">
-    
+<header
+  class="fixed inset-x-0 top-0 bg-gray-100/90 backdrop-blur-md shadow z-50"
+>
+  <nav
+    class="mx-auto w-full lg:w-5xl md:max-w-5xl p-5 border-b-2 flex items-center justify-between"
+  >
     <!-- Logo -->
     <a href="/" class="font-anton uppercase text-2xl underline">
       Adi Aulia Rahman
@@ -15,11 +18,19 @@ const BASE_URL = import.meta.env.BASE_URL
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex gap-7 font-medium">
-      <li><a class="hover:text-blue-600" href={`${BASE_URL}`}>Home</a></li>
-      <li><a class="hover:text-blue-600" href={`${BASE_URL}/about`}>About Me</a></li>
-      <li><a class="hover:text-blue-600" href={`${BASE_URL}/contact`}>Contact Me</a></li>
-      <li><a class="hover:text-blue-600" href={`${BASE_URL}/projects`}>Projects</a></li>
-      <li><a class="hover:text-blue-600" href={`${BASE_URL}/blog`}>Blog</a></li>
+      <li><a class="hover:text-gray-600 hover:underline" href={`${BASE_URL}`}>Home</a></li>
+      <li>
+        <a class="hover:text-gray-600 hover:underline" href={`${BASE_URL}about`}>About Me</a>
+      </li>
+      <li>
+        <a class="hover:text-gray-600 hover:underline" href={`${BASE_URL}contact`}
+          >Contact Me</a>
+      </li>
+      <li>
+        <a class="hover:text-gray-600 hover:underline" href={`${BASE_URL}projects`}
+          >Projects</a>
+      </li>
+      <li><a class="hover:text-gray-600 hover:underline" href={`${BASE_URL}blog`}>Blog</a></li>
     </ul>
 
     <!-- Mobile Toggle -->
@@ -33,7 +44,6 @@ const BASE_URL = import.meta.env.BASE_URL
       <span class="w-6 h-0.5 bg-black"></span>
       <span class="w-6 h-0.5 bg-black"></span>
     </button>
-
   </nav>
 
   <!-- Mobile Menu -->

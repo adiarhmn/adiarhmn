@@ -1,28 +1,8 @@
 ---
 import CardProject from '../components/CardProject.astro';
+import { projects } from '../data/projects';
 import Layout from '../layouts/Layout.astro'
 
-const projects = [
-  {
-    title: 'Aplikasi Investasi Ternak',
-    year: 'Des 2024 – Jul 2025',
-    desc: 'Mobile app full-stack (React TS & Laravel), integrasi payment gateway, dan sudah dirilis di Google Play Store.',
-    image: '/projects/investasi-ternak.jpg',
-  },
-  {
-    title: 'Website Penelitian Eduwisata TOGA',
-    year: 'Okt 2024 – Jan 2025',
-    desc: 'Website penelitian berbasis Laravel, serta kontribusi penulisan buku penelitian.',
-    image: '/projects/eduwisata-toga.jpg',
-  },
-  {
-    title: 'Marketplace Politala',
-    year: 'Okt 2024 – Jan 2025',
-    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
-    image: '/projects/ict-marketplace/tim.jpeg',
-    link: '/projects/ict-marketplace',
-  },
-];
 ---
 
 <Layout>
