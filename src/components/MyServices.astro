@@ -1,0 +1,75 @@
+---
+const services = [
+  {
+    id: 1,
+    title: 'Web App Development',
+    description:
+      'Pembuatan aplikasi web modern yang cepat, aman, dan scalable.',
+    icon: '/service-images/arranging-files.svg',
+  },
+  {
+    id: 2,
+    title: 'API & Backend Engineering',
+    description:
+      'Membangun REST API, integrasi sistem, dan backend berkualitas tinggi.',
+    icon: '/service-images/website-setting.svg',
+  },
+  {
+    id: 3,
+    title: 'Software Optimization',
+    description:
+      'Maintenance, perbaikan performa, dan peningkatan fitur aplikasi.',
+    icon: '/service-images/website-maintenance.svg',
+  },
+  {
+    id: 4,
+    title: 'System & Requirements Analysis',
+    description:
+      'Analisa kebutuhan bisnis untuk menemukan solusi digital terbaik.',
+    icon: '/service-images/employee-performance.svg',
+  },
+  {
+    id: 5,
+    title: 'Technology & Architecture Planning',
+    description:
+      'Rekomendasi teknologi dan desain arsitektur sistem yang tepat.',
+    icon: '/service-images/building-website.svg',
+  },
+  {
+    id: 6,
+    title: 'IT & Security Audit',
+    description:
+      'Audit infrastruktur IT dan keamanan sistem secara menyeluruh.',
+    icon: '/service-images/web-security.svg',
+  },
+]
+---
+
+<section>
+  <h2
+    class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block"
+  >
+    MY SERVICEs
+  </h2>
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-5">
+    {
+      services.map((service) => (
+        <div class={`relative border rounded-xl overflow-hidden p-2`}>
+          <div class="min-h-40 relative z-10">
+            <h3 class="mb-1 pt-10 text-lg font-semibold text-slate-800">
+              {service.title}
+            </h3>
+            <p class="mb-10 text-sm text-slate-700">{service.description}</p>
+          </div>
+          <div class="absolute top-0 right-0 mb-3">
+            <img
+              class="h-45! grayscale object-cover opacity-25 "
+              src={service.icon}
+              alt={service.title}
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
