@@ -1,22 +1,49 @@
 ---
-import CardProject from '../components/CardProject.astro';
-import { projects } from '../data/projects';
+import CardProject from '../components/CardProject.astro'
+import { personalProject, projects } from '../data/projects'
 import Layout from '../layouts/Layout.astro'
-
 ---
 
 <Layout>
-  <section class="py-20 bg-gray-50">
+  <section class="py-20 bg-gray-50" x-data="{ tab: 'professional' }">
     <h2
       class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block"
     >
       MY PROJECTS
     </h2>
 
+    <!-- Tabs -->
+    <div class="flex gap-3 mb-6 mt-5">
+      <!-- Tab - Professional -->
+      <button
+        class="px-4 py-2 rounded-full border transition text-xs"
+        :class="tab === 'professional' ? 'bg-black text-white' : 'bg-white text-gray-600'"
+        @click="tab = 'professional'"
+      >
+        Professional
+      </button>
+
+      <!-- Tab - Personal -->
+      <button
+        class="px-4 py-2 rounded-full border transition text-xs"
+        :class="tab === 'personal' ? 'bg-black text-white' : 'bg-white text-gray-600'"
+        @click="tab = 'personal'"
+      >
+        Personal
+      </button>
+    </div>
+
     <div
+      x-show="tab === 'professional'"
       class="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       {projects.map((project) => <CardProject {...project} />)}
+    </div>
+    <div
+      x-show="tab === 'personal'"
+      class="w-full mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      {personalProject.map((project) => <CardProject {...project} />)}
     </div>
   </section>
 </Layout>

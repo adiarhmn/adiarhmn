@@ -2,6 +2,13 @@
 import '../css/index.css'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+
+const {
+  title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
+  description = 'Software engineer specializing in modern web development, mobile apps, and IT consulting.',
+  image = '/default-og.png', // ganti dengan image home
+  url = 'https://adiarhmn.dev',
+} = Astro.props
 ---
 
 <!doctype html>
@@ -12,22 +19,70 @@ import Footer from '../components/Footer.astro'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Adi Aulia Rahman — Software Engineer & IT Consultant</title>
+     <!-- Dynamic Title -->
+    <title>{title}</title>
 
-    <meta property="og:title" content="Adi Aulia Rahman Portfolio" />
-    <meta
-      property="og:description"
-      content="Software Engineer & IT Consultant"
-    />
+    <!-- Dynamic Description -->
+    <meta name="description" content={description} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={url} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://adiarhmn.github.io/" />
 
-    <meta name="google-site-verification" content="0JFQ7-a8ShzP9xkC6iSn15WtRdWDOCU6rqMOh-79RgE" />
+     <!-- Open Graph Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={image} />
+
+      <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+     <!-- Google Verification -->
+    <meta
+      name="google-site-verification"
+      content="0JFQ7-a8ShzP9xkC6iSn15WtRdWDOCU6rqMOh-79RgE"
+    />
+
+      {url === "https://adiarhmn.dev" && (
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Adi Aulia Rahman",
+          "jobTitle": "Software Engineer",
+          "url": "https://adiarhmn.dev",
+          "sameAs": [
+            "https://github.com/adiarhmn",
+            "https://www.instagram.com/adiarcoding"
+          ]
+        })}
+      </script>
+    )}
 
     <meta
       name="description"
       content="Software engineer specializing in modern web development, mobile apps, and IT consulting with experience in Laravel, React, Astro, and mobile applications."
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adi Aulia Rahman",
+        "jobTitle": "Software Engineer",
+        "url": "https://adiauliarahman.dev",
+        "sameAs": [
+          "https://github.com/adiarhmn",
+          "https://www.instagram.com/adiarcoding"
+        ]
+      }
+    </script>
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,19 +93,22 @@ import Footer from '../components/Footer.astro'
     />
 
     <!-- Dev Icons -->
-
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+
+    <!-- Alpine -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
   </head>
   <body class="font-dmono antialiased flex bg-gray-100 text-gray-900">
     <div
-      class="w-full lg:w-5xl md:max-w-5xl mx-auto px-5 relative min-h-screen bg-gray-50"
+      class="w-full lg:w-5xl md:max-w-5xl mx-auto relative min-h-screen bg-gray-50"
     >
       <Header />
-      <div class="mt-20">
+      <div class="mt-20 px-5">
         <slot />
       </div>
       <Footer />

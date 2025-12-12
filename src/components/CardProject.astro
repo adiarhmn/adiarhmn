@@ -1,22 +1,24 @@
 ---
+import { truncate } from "../utils"
+
 const { image, title, year, desc, link } = Astro.props
 const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <div
-  class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition"
+  class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition pb-5 flex flex-col"
 >
-  <img src={image} alt={title} class="w-full h-65 object-cover" />
-  <div class="p-5">
+  <img src={image} alt={title} class="w-full h-70 object-cover" />
+  <div class="p-5 grow">
     <h3 class="text-xl font-bold">{title}</h3>
     <p class="text-sm text-gray-500 mb-3">{year}</p>
-    <p class="text-gray-700">{desc}</p>
+    <p class="text-gray-700 text-sm">{truncate(desc,70)}</p>
   </div>
   {
     link && (
       <a
         href={BASE_URL + link}
-        class="block text-center py-3 bg-gray-800 text-white hover:bg-gray-900 transition mx-5 rounded"
+        class="block text-center py-2 bg-gray-800 text-white hover:bg-gray-900 transition mx-5 rounded"
       >
         Lihat Detail
       </a>
