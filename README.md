@@ -1,46 +1,88 @@
-# Astro Starter Kit: Basics
+# 👋 Hi, I'm **Adi Aulia Rahman**
 
-```sh
-npm create astro@latest -- --template basics
-```
+### 🚀 Software Engineer & IT Consultant
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Welcome to my digital workspace! I build modern, scalable, and user‑friendly applications — from web apps, mobile apps, to complete IT solutions for businesses.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🧑‍💻 About Me
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+* 💼 Software Engineer & IT Consultant
+* 🎓 Cum Laude Graduate (GPA 3.96)
+* 🌐 Passionate about web, mobile, and system development
+* 💡 Love combining logic + creativity to build intuitive user experiences
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+I enjoy turning ideas into real products — clean, fast, and reliable.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 🔧 Tech Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### 🖥️ Frontend
 
-## 👀 Want to learn more?
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" />
+</p>
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 🛠 Backend
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" />
+</p>
+
+### 📱 Mobile
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" />
+</p>
+
+### 🧰 Tools
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" />
+</p>
+
+---
+
+## 📂 Featured Projects
+
+### 🔹 **Professional Projects**
+
+* Corporate systems
+* Company profiles
+* Custom dashboards
+* Internal apps
+
+### 🔹 **Personal Projects**
+
+* Experiments, UI explorations, full‑stack apps, and learning projects
+
+> Want to see more? Check out the **Projects** section on my portfolio.
+
+---
+
+## 📬 Contact Me
+
+Feel free to reach out if you'd like to collaborate or discuss a project!
+
+* ✉️ Email: **[adiauliarahman.dev@gmail.com](mailto:adiauliarahman1@gmail.com)**
+* 💼 LinkedIn: **linkedin.com/in/adi-aulia-rahman**
+* 🌐 Portfolio: **[https://adiauliarahman.dev](https://adiauliarahman.dev)**
+
+---
+
+## 🤝 Let's Connect
+
+If you enjoy my work, feel free to ⭐ my repos, fork ideas, or get in touch!
+
+> *"Code with purpose. Build with passion."*
