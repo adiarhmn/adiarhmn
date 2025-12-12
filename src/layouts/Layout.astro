@@ -6,9 +6,10 @@ import Footer from '../components/Footer.astro'
 const {
   title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
   description = 'Software engineer specializing in modern web development, mobile apps, and IT consulting.',
-  image = '/default-og.png', // ganti dengan image home
-  url = 'https://adiarhmn.dev',
+  image = '/default-og.png',
 } = Astro.props
+
+const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
 ---
 
 <!doctype html>
@@ -26,15 +27,15 @@ const {
     <meta name="description" content={description} />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={url} />
+    <link rel="canonical" href={SITE} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://adiarhmn.github.io/" />
+    <meta property="og:url" content={SITE} />
 
      <!-- Open Graph Tags -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={SITE} />
     <meta property="og:image" content={image} />
 
       <!-- Twitter Cards -->
@@ -49,7 +50,7 @@ const {
       content="0JFQ7-a8ShzP9xkC6iSn15WtRdWDOCU6rqMOh-79RgE"
     />
 
-      {url === "https://adiarhmn.dev" && (
+      {SITE === "https://adiauliarahman.dev" && (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
