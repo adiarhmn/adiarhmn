@@ -7,8 +7,8 @@ import sitemap from '@astrojs/sitemap';
 const BASE_URL = '/';
 // const BASE_URL = '/adiauliarahman.dev/';
 
-const URL = 'https://adiarhmn.github.io';
-// const URL = "https://adiauliarahman.dev/"
+// const URL = 'https://adiarhmn.github.io';
+const URL = "https://adiauliarahman.dev/"
 
 // https://astro.build/config
 export default defineConfig({

@@ -17,7 +17,7 @@ export const topProjects: Project[] = [
     title: 'Marketplace Politala',
     year: 'Okt 2024 – Jan 2025',
     desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
-    image: 'projects/ict-marketplace/cover.png',
+    image: '/projects/ict-marketplace/cover.png',
     link: 'projects/ict-marketplace',
   },
 ]
@@ -66,7 +66,7 @@ export const personalProject: Project[] = [
     title: 'Whatsapp Gateway API',
     year: 'Sep 2025 – Des 2025',
     desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
-    image: 'projects/coming-soon.png',
+    image: '/projects/coming-soon.png',
     // link: 'projects/ict-marketplace',
   },
 ]
