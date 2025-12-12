@@ -7,30 +7,55 @@ import MyProjects from '../components/MyProjects.astro'
 import { topProjects } from '../data/projects'
 import MyServices from '../components/MyServices.astro'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <div class="pt-10 space-y-3">
+  <div class="py-10 space-y-3">
     <h2
       class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block"
     >
       HI I'M ADI AULIA RAHMAN
     </h2>
     <p>
-      I’m a <strong>Software Engineer</strong> & <strong>IT Consultant</strong> who helps businesses turn ideas
-      into clean, scalable, and user-friendly digital products. I love working
-      across modern web technologies—building interfaces that feel intuitive and
-      systems that solve real problems.
+      I’m a <strong>Software Engineer</strong> & <strong>IT Consultant</strong> who
+      helps businesses turn ideas into clean, scalable, and user-friendly digital
+      products. I love working across modern web technologies—building interfaces
+      that feel intuitive and systems that solve real problems.
     </p>
+
+    <div class="flex gap-5">
+      <a
+        href={BASE_URL + 'about-me'}
+        class="text-white bg-gray-800 w-fit py-2 px-5 rounded hover:bg-gray-600 transition duration-300"
+        >More About Me ></a
+      >
+      <a
+        href={BASE_URL + 'about-me'}
+        class="text-gray-800 w-fit py-2 px-5 rounded bg-gray-200 hover:bg-gray-300 transition duration-300"
+        >Contact me directly >
+      </a>
+    </div>
   </div>
   <div class="flex gap-10 mt-5 mb-20">
-    <div class="border w-50 p-5 shadow-[10px_10px_0px_var(--color-black)]">
-      + 12 years of experience
+    <div class="border w-50 p-2 shadow-[10px_10px_0px_var(--color-black)]">
+      <strong class="text-4xl font-anton">
+        <span class="text-5xl">+</span>
+        <span>3</span>
+      </strong>
+      <br />
+      years of experience
     </div>
-    <div class="border w-50 p-5 shadow-[10px_10px_0px_var(--color-black)]">
-      + 12 years of experience
+    <div class="border w-50 p-2 shadow-[10px_10px_0px_var(--color-black)]">
+      <strong class="text-4xl font-anton">
+        <span class="text-5xl">+</span>
+        <span>10</span>
+      </strong>
+      <br />
+      projects completed
     </div>
   </div>
 

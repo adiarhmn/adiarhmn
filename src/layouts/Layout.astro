@@ -100,6 +100,8 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
 
+
+
     <!-- Alpine -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -114,5 +116,15 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
       </div>
       <Footer />
     </div>
+
+
+    <!-- Development version -->
+    <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module">
+      lucide.createIcons();
+    </script>
   </body>
 </html>
