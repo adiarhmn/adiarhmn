@@ -78,7 +78,7 @@ I enjoy turning ideas into real products — clean, fast, and reliable.
 
 Feel free to reach out if you'd like to collaborate or discuss a project!
 
-* ✉️ Email: **[adiauliarahman.dev@gmail.com](mailto:adiauliarahman1@gmail.com)**
+* ✉️ Email: **[adiauliarahman1@gmail.com](mailto:adiauliarahman1@gmail.com)**
 * 💼 LinkedIn: **linkedin.com/in/adi-aulia-rahman**
 * 🌐 Portfolio: **[https://adiauliarahman.dev](https://adiauliarahman.dev)**
 
