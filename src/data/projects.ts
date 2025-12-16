@@ -18,7 +18,7 @@ export const topProjects: Project[] = [
     year: 'Okt 2024 – Jan 2025',
     desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
     image: '/projects/ict-marketplace/cover.png',
-    link: 'projects/ict-marketplace',
+    // link: 'projects/ict-marketplace',
   },
 ]
 
@@ -29,28 +29,28 @@ export const projects: Project[] = [
     year: 'Sep 2025 - Oct 2025',
     desc: 'Developing and maintaining hosting server for Batuah.',
     image: '/projects/hosting-batuah/cover.png',
-    link: '/projects/hosting-batuah',
+    // link: '/projects/hosting-batuah',
   },
   {
     title: 'KPI Employee Presence',
     year: 'Okt 2024 – Jan 2025',
-    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
+    desc: 'Website KPI Employee Presence. Untuk Mengatasi masalah KPI Employee Presence yang masih manual.',
     image: '/projects/tefa-kpi/cover.png',
-    link: '/projects/ict-marketplace',
+    // link: '/projects/ict-marketplace',
   },
   {
     title: 'E-Commerce Raja Ikan',
     year: 'Okt 2024 – Jan 2025',
-    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
+    desc: 'Website jual beli ikan untuk raja ikan kendari.',
     image: '/projects/raja-ikan/cover.png',
-    link: '/projects/ict-marketplace',
+    // link: '/projects/ict-marketplace',
   },
   {
     title: 'Politala Exam Attendance',
     year: 'Okt 2024 – Jan 2025',
-    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
-    image: '/projects/ict-marketplace/cover.png',
-    link: 'projects/ict-marketplace',
+    desc: 'Website presensi ujian Politala. Untuk Mengatasi masalah presensi ujian Politala yang masih manual',
+    image: '/projects/presensi-ujian-politala/cover.png',
+    // link: 'projects/ict-marketplace',
   },
 ]
 
@@ -65,7 +65,7 @@ export const personalProject: Project[] = [
   {
     title: 'Whatsapp Gateway API',
     year: 'Sep 2025 – Des 2025',
-    desc: 'Website marketplace untuk penjualan hasil produk berkualitas di Politala.',
+    desc: 'Website ',
     image: '/projects/coming-soon.png',
     // link: 'projects/ict-marketplace',
   },
