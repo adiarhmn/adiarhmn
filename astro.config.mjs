@@ -7,8 +7,8 @@ import sitemap from '@astrojs/sitemap';
 const BASE_URL = '/';
 // const BASE_URL = '/adiauliarahman.dev/';
 
-// const SITE = 'https://adiarhmn.github.io';
-const SITE = "https://adiauliarahman.dev/"
+const SITE = 'https://adiarhmn.github.io';
+// const SITE = "https://adiauliarahman.dev/"
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +18,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [sitemap()],
 })
