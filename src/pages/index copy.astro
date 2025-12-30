@@ -1,0 +1,103 @@
+---
+import Experience from '../components/LandingPageComponents/Experience.astro'
+import Skill from '../components/Skill.astro'
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro'
+import MyProjects from '../components/MyProjects.astro'
+import { topProjects } from '../data/projects'
+import MyServices from '../components/MyServices.astro'
+
+const BASE_URL = import.meta.env.BASE_URL
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <div class="py-10 space-y-3 min-h-screen">
+        <div class="flex gap-8 mx-auto w-fit pt-20">
+            <div class=" rounded-3xl flex flex-col justify-center ">
+                <h1 class="font-anton text-6xl mb-4">HI, I AM <br /> ADI AULIA RAHMAN</h1>
+                <h2 class="font-anton text-cyan-500 text-3xl mb-8">I am a Software Engineer & IT Consultant</h2>
+                <p class="text-xl mb-16">
+                    <span id="type-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+
+                <div>
+                    <a href={BASE_URL + 'about-me'} class="bg-gray-800 text-white py-3 px-5 rounded">
+                        More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <!-- <img src="/me/profile.jpg" alt="Profile Picture of Adi Aulia Rahman" class="w-140 h-auto rounded" /> -->
+                <img src="/person/1.webp" alt="Profile Pictur" class="w-120 h-auto" />
+            </div>
+        </div>
+    </div>
+
+    <div class="flex gap-10 mt-5 mb-20">
+        <div class="border w-50 p-2 shadow-[10px_10px_0px_var(--color-black)]">
+            <strong class="text-4xl font-anton">
+                <span class="text-5xl">+</span>
+                <span>3</span>
+            </strong>
+            <br />
+            years of experience
+        </div>
+        <div class="border w-50 p-2 shadow-[10px_10px_0px_var(--color-black)]">
+            <strong class="text-4xl font-anton">
+                <span class="text-5xl">+</span>
+                <span>7+</span>
+            </strong>
+            <br />
+            projects completed
+        </div>
+    </div>
+
+    <MyProjects projects={topProjects} />
+    <Experience />
+    <MyServices />
+    <Skill />
+
+    <script is:inline>
+        const textsJSON = [
+            'I help startups build scalable web applications.',
+            'Clean architecture. Thoughtful UI.',
+            'Every line of code is written by hand.',
+        ]
+        const texts = JSON.parse(JSON.stringify(textsJSON))
+        const el = document.getElementById('type-text')
+
+        const typingSpeed = 80
+        const deleteSpeed = 40
+        const holdDuration = 1500
+
+        let textIndex = 0
+        let charIndex = 0
+        let isDeleting = false
+
+        function loop() {
+            const current = texts[textIndex]
+
+            if (!isDeleting) {
+                el.textContent = current.slice(0, charIndex++)
+                if (charIndex > current.length) {
+                    setTimeout(() => (isDeleting = true), holdDuration)
+                }
+            } else {
+                el.textContent = current.slice(0, charIndex--)
+                if (charIndex < 0) {
+                    isDeleting = false
+                    textIndex = (textIndex + 1) % texts.length
+                    charIndex = 0
+                }
+            }
+
+            setTimeout(loop, isDeleting ? deleteSpeed : typingSpeed)
+        }
+
+        loop()
+    </script>
+</Layout>

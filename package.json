@@ -9,10 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^4.1.3",
     "@astrojs/sitemap": "^3.6.0",
     "@lucide/astro": "^0.560.0",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.5",
+    "cal-heatmap": "^4.2.4",
+    "preact": "^10.28.1",
     "tailwindcss": "^4.1.17"
   }
 }

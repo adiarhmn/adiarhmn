@@ -1,0 +1,24 @@
+---
+interface AnchorButtonProps {
+    href: string
+    target?: string
+    variant: 'primary' | 'secondary' | 'default' 
+    size?: 'small' | 'medium' | 'large'
+}
+
+const variants = {
+     primary: 'bg-sky-600/40 border-sky-500 text-sky-200 hover:bg-sky-600 shadow-lg shadow-sky-500/50',
+     white: 'bg-gray-800 border-white/50 text-slate-300',
+     secondary: 'bg-gray-600 border-gray-500 text-gray-200 hover:bg-gray-700',
+     default: 'bg-white border-gray-400 text-gray-800 hover:bg-gray-200',
+}
+const { href, target, variant, size } = Astro.props as AnchorButtonProps
+---
+
+<a
+    href={href}
+    target={target}
+    class={`flex gap-3 items-center border p-1 rounded-xl px-3 w-fit transition-all duration-200 ease-in-out cursor-pointer hover:scale-98 ${variants[variant]} ${size === 'small' ? 'text-sm' : size === 'large' ? 'text-lg' : 'text-base'}`}
+>
+    <slot />
+</a>

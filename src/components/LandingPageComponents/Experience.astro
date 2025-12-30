@@ -1,0 +1,71 @@
+---
+// Jika kamu ingin membuat data lebih dinamis, kamu bisa ambil dari props nanti.
+// Untuk sekarang kita hardcode dulu.
+// Experience Grouped By Role
+const experiences = [
+    {
+        role: 'Mentor / Educator',
+        items: [
+            {
+                company: 'CV. Batuah Teknologi Semesta',
+                year: 'Okt 2023 – Sekarang',
+                desc: 'Mengajar dan membimbing mahasiswa dalam pengembangan proyek IT dengan materi PHP, Laravel, CI4, dan ReactJS.',
+            },
+        ],
+    },
+    {
+        role: 'Backend Developer',
+        items: [
+            {
+                company: 'ICT Politala',
+                year: 'Mei 2023 – Des 2023',
+                desc: 'Membangun RESTful API dan CMS Admin menggunakan Laravel 10 untuk sistem marketplace.',
+            },
+        ],
+    },
+    {
+        role: 'Fullstack Developer',
+        items: [
+            {
+                company: 'Teaching Factory Batch 2 Politala',
+                year: 'Okt 2023 – Des 2023',
+                desc: "Mengembangkan aplikasi e-commerce 'Raja Ikan' secara full-stack dengan CodeIgniter 4 & Bootstrap 4.",
+            },
+            {
+                company: 'Teaching Factory Batch 1 Politala',
+                year: 'Okt 2023 – Des 2023',
+                desc: "Mengembangkan aplikasi e-commerce 'Raja Ikan' secara full-stack dengan CodeIgniter 4 & Bootstrap 4.",
+            },
+        ],
+    },
+]
+---
+
+<section class="pb-20 z-2 px-10 lg:px-30">
+    <div class="w-full">
+        <div class="space-y-8 mt-5 border-l-2 border-dashed border-slate-400">
+            {
+                experiences.map((item) => (
+                    <div class="pl-10 relative">
+                        <div class="bg-white rounded w-fit p-2 absolute -left-4 top-0 shadow-md">
+                            <i data-lucide="folder-closed" class="size-4 text-sky-500" />
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-sky-500 font-anton">{item.role}</h3>
+                        </div>
+
+                        <ul class="mt-1 space-y-2">
+                            {item.items.map((subItem) => (
+                                <li class="mt-4">
+                                    <h4 class="text-md font-light font-mono">{subItem.company}</h4>
+                                    <span class="text-slate-500 text-[10px] lg:text-sm">{subItem.year}</span>
+                                    <p class="text-slate-300 text-xs lg:text-lg">{subItem.desc}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

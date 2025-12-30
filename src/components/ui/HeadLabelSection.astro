@@ -1,0 +1,15 @@
+---
+interface HeadLabelSectionProps {
+    title: string
+    description: string
+}
+
+const { title, description } = Astro.props as HeadLabelSectionProps
+---
+
+<div class="text-center max-w-xl mb-16 mx-auto px-5">
+    <div class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent">{title}</div>
+    <p class="text-xs lg:text-base">
+        {description}
+    </p>
+</div>

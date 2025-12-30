@@ -1,19 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Experience from '../components/LandingPageComponents/Experience.astro'
-import HeroSection from '../components/LandingPageComponents/HeroSection.astro'
-import HeadLabelSection from '../components/ui/HeadLabelSection.astro'
-import FeaturedProjects from '../components/LandingPageComponents/FeaturedProjects.astro'
-import { t } from '../i18n'
-
+import Layout from '../../layouts/Layout.astro'
+import Experience from '../../components/LandingPageComponents/Experience.astro'
+import HeroSection from '../../components/LandingPageComponents/HeroSection.astro'
+import HeadLabelSection from '../../components/ui/HeadLabelSection.astro'
+import FeaturedProjects from '../../components/LandingPageComponents/FeaturedProjects.astro'
+import { t } from '../../i18n'
 const BASE_URL = import.meta.env.BASE_URL
-
-const lang = 'id'
+const lang = 'en'
 ---
 
 <Layout>
     <!-- Hero Section -->
-    <HeroSection />
+    <HeroSection lang={lang} />
 
     <!-- How I Work Section  -->
     <section class="max-w-6xl mx-auto px-6 py-24">
@@ -23,7 +21,7 @@ const lang = 'id'
                 <h2 class="text-3xl lg:text-4xl font-bold text-sky-400">{t(lang, 'index.hero.title.1')}</h2>
 
                 <p class="mt-6 text-slate-400 leading-relaxed">
-                    Iss see software engineering as a problem-solving discipline. Before writing code, I focus on
+                    I see software engineering as a problem-solving discipline. Before writing code, I focus on
                     understanding constraints, designing clear systems, and choosing simplicity over complexity.
                 </p>
 

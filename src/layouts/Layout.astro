@@ -2,6 +2,7 @@
 import '../css/index.css'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import BackgroundMain from '../components/LandingPageComponents/BackgroundMain.astro'
 
 const {
   title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
@@ -71,7 +72,7 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
       content="Software engineer specializing in modern web development, mobile apps, and IT consulting with experience in Laravel, React, Astro, and mobile applications."
     />
 
-    <script type="application/ld+json">
+    <!-- <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -83,15 +84,19 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
           "https://www.instagram.com/adiarcoding"
         ]
       }
-    </script>
+    </script> -->
 
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
     <!-- Dev Icons -->
     <link
@@ -100,31 +105,29 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
 
-
+     <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
 
     <!-- Alpine -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   </head>
-  <body class="font-dmono antialiased flex bg-gray-100 text-gray-900">
-    <div
-      class="w-full lg:w-5xl md:max-w-5xl mx-auto relative min-h-screen bg-gray-50"
-    >
+
+  <body class="font-jakarta antialiased text-slate-400 bg-black">
       <Header />
-      <div class="mt-20 px-5">
-        <slot />
-      </div>
+
+      <BackgroundMain />
+      <slot />
       <Footer />
-    </div>
 
-
-    <!-- Development version -->
-    <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
 
     <!-- Production version -->
     <script src="https://unpkg.com/lucide@latest"></script>
+   
     <script type="module">
       lucide.createIcons();
     </script>
+    <slot name="scripts" />
   </body>
 </html>

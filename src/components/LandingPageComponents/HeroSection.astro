@@ -1,0 +1,60 @@
+---
+import { t } from '../../i18n'
+
+const { lang } = Astro.props
+---
+
+<section class="flex flex-col justify-center w-full min-h-screen mb-8">
+    <!-- Hero Content 1 : Main Content -->
+    <div class="text-center w-full flex items-center justify-center mb-16 lg:pt-30">
+        <div class="max-w-3xl mx-auto p-10">
+            <div class="relative mb-8 overflow-hidden">
+                <!-- Base text -->
+                <h1 class="font-anton text-5xl lg:text-7xl text-sky-900 text-center text-nowrap">
+                    {t(lang, 'index.hero.title.1')}
+                    <br class="lg:hidden" />
+                    {t(lang, 'index.hero.title.2')}
+                </h1>
+                <h1
+                    class="font-anton text-5xl lg:text-7xl text-sky-500 text-center text-nowrap text-stroke absolute inset-0"
+                >
+                    {t(lang, 'index.hero.title.1')}
+                    <br class="lg:hidden" />
+                    {t(lang, 'index.hero.title.2')}
+                </h1>
+
+                <!-- Scan layer -->
+                <h1
+                    class="scan-text drop-shadow-[0_0_15px_rgba(56,189,248,0.6)] absolute inset-0 font-anton text-5xl lg:text-7xl text-sky-400 text-center text-nowrap"
+                >
+                    {t(lang, 'index.hero.title.1')}
+                    <br class="lg:hidden" />
+                    {t(lang, 'index.hero.title.2')}
+                </h1>
+            </div>
+
+            <h2 class="text-lg lg:text-2xl font-semibold mb-8 text-slate-300">
+                {t(lang, 'index.hero.subtitle')}
+            </h2>
+            <p class="text-sm lg:text-base">
+                {t(lang, 'index.hero.description')}
+            </p>
+        </div>
+    </div>
+
+    <!-- Hero Content 2 : Action -->
+    <div class="flex justify-center mb-16 gap-3">
+        <button
+            class="bg-sky-600/40 flex gap-3 items-center border border-sky-500 text-sky-200 p-2 rounded-xl px-5 w-fit hover:bg-sky-600/70 shadow-lg shadow-sky-500/50 transition-all duration-200 ease-in-out hover:shadow-sky-500 hover:scale-98"
+        >
+            <i data-lucide="briefcase" class="size-5"></i>
+            My Services
+        </button>
+        <button
+            class="bg-slate-600/40 flex gap-3 items-center border border-slate-500 text-slate-200 p-2 rounded-xl px-5 w-fit hover:bg-slate-600/70 shadow-lg shadow-slate-500/50 transition-all duration-200 ease-in-out hover:shadow-slate-500 hover:scale-98"
+        >
+            <i data-lucide="mail" class="size-5"></i>
+            Contact Me
+        </button>
+    </div>
+</section>

@@ -4,4 +4,5 @@ export interface Project {
   desc: string
   image: string
   link?: string
+  stackIcons?: string[]
 }

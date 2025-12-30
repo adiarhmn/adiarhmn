@@ -4,102 +4,88 @@ import { Mail, Instagram } from '@lucide/astro'
 ---
 
 <Layout title="Contact Me — Adi Aulia Rahman">
-  <section class="py-10 bg-gray-50">
-    <h2
-      class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block mb-10"
-    >
-      Contact Me
-    </h2>
+    <section class="py-10 bg-gray-50">
+        <h2 class="font-anton text-3xl uppercase border-b-2 border-gray-800 inline-block mb-10">Contact Me</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <!-- LEFT: Text Intro -->
-      <div>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-          Let’s Work Together
-        </h3>
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Feel free to reach out if you want to collaborate, discuss a project,
-          or just connect professionally. I usually respond within the same day.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- LEFT: Text Intro -->
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Let’s Work Together</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Feel free to reach out if you want to collaborate, discuss a project, or just connect
+                    professionally. I usually respond within the same day.
+                </p>
 
-        <div class="space-y-3">
-          <a
-            href="mailto:adiauliarahman1@gmail.com"
-            class="flex gap-2 items-center"
-          >
-            <i data-lucide="mail" class="size-5"></i>
-            <span class="text-primary-500 ml-1">adiauliarahman1@gmail.com</span>
-          </a>
-          <a href="https://www.instagram.com/adiaulia_r" class="flex gap-2 items-center">
-            <i data-lucide="instagram" class="size-5"></i>
-            <span class="text-primary-500 ml-1">@adiaulia_r</span>
-          </a>
-          <a href="https://www.instagram.com/adiarcoding" class="flex gap-2 items-center">
-            <i data-lucide="instagram" class="size-5"></i>
-            <span class="text-primary-500 ml-1">@adiarcoding</span>
-          </a>
-          <a href="https://www.instagram.com/adiarcoding" class="flex gap-2 items-center">
-            <i data-lucide="linkedin" class="size-5"></i>
-            <span class="text-primary-500 ml-1"> Adi Aulia Rahman</span>
-          </a>
-          <a href="https://github.com/adiarhmn" class="flex gap-2 items-center">
-            <i data-lucide="github" class="size-5"></i>
-            <span class="text-primary-500 ml-1">adiarhmn</span>
-          </a>
+                <div class="space-y-3">
+                    <a href="mailto:adiauliarahman1@gmail.com" class="flex gap-2 items-center">
+                        <i data-lucide="mail" class="size-5"></i>
+                        <span class="text-primary-500 ml-1">adiauliarahman1@gmail.com</span>
+                    </a>
+                    <a href="https://www.instagram.com/adiaulia_r" class="flex gap-2 items-center">
+                        <i data-lucide="instagram" class="size-5"></i>
+                        <span class="text-primary-500 ml-1">@adiaulia_r</span>
+                    </a>
+                    <a href="https://www.instagram.com/adiarcoding" class="flex gap-2 items-center">
+                        <i data-lucide="instagram" class="size-5"></i>
+                        <span class="text-primary-500 ml-1">@adiarcoding</span>
+                    </a>
+                    <a href="https://www.instagram.com/adiarcoding" class="flex gap-2 items-center">
+                        <i data-lucide="linkedin" class="size-5"></i>
+                        <span class="text-primary-500 ml-1"> Adi Aulia Rahman</span>
+                    </a>
+                    <a href="https://github.com/adiarhmn" class="flex gap-2 items-center">
+                        <i data-lucide="github" class="size-5"></i>
+                        <span class="text-primary-500 ml-1">adiarhmn</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Contact Form -->
+            <form
+                action="https://formsubmit.co/adiauliarahman1@gmail.com"
+                method="POST"
+                class="bg-white shadow-lg rounded-xl p-6 space-y-4"
+            >
+                <div>
+                    <label class="block text-gray-700 mb-1">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"
+                    />
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-1">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"
+                    />
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 mb-1">Message</label>
+                    <textarea
+                        name="message"
+                        rows="5"
+                        required
+                        class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"></textarea>
+                </div>
+
+                <!-- Disable spam -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://adiauliarahman.dev/thank-you" />
+
+                <button
+                    type="submit"
+                    class="w-full py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+                >
+                    Send Message
+                </button>
+            </form>
         </div>
-      </div>
-
-      <!-- RIGHT: Contact Form -->
-      <form
-        action="https://formsubmit.co/adiauliarahman1@gmail.com"
-        method="POST"
-        class="bg-white shadow-lg rounded-xl p-6 space-y-4"
-      >
-        <div>
-          <label class="block text-gray-700 mb-1">Name</label>
-          <input
-            type="text"
-            name="name"
-            required
-            class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"
-          />
-        </div>
-
-        <div>
-          <label class="block text-gray-700 mb-1">Email</label>
-          <input
-            type="email"
-            name="email"
-            required
-            class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"
-          />
-        </div>
-
-        <div>
-          <label class="block text-gray-700 mb-1">Message</label>
-          <textarea
-            name="message"
-            rows="5"
-            required
-            class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-gray-800"
-          ></textarea>
-        </div>
-
-        <!-- Disable spam -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://adiauliarahman.dev/thank-you"
-        />
-
-        <button
-          type="submit"
-          class="w-full py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
+    </section>
 </Layout>
