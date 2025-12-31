@@ -1,0 +1,45 @@
+---
+import HeadLabelSection from '../../../components/ui/HeadLabelSection.astro'
+import { ExperienceData, type Experience } from './data'
+const { lang } = Astro.props as { lang: 'en' | 'id' }
+const experiences = ExperienceData[lang] as Experience[]
+console.log(experiences, lang)
+---
+
+<section class="pb-20 z-2 px-10 lg:px-30 mt-20">
+    <div class="w-full">
+        <!-- Experience Section -->
+        <HeadLabelSection
+            title="EXPERIENCE"
+            description="Here are some of my professional experiences that highlight my journey and growth as a software engineer and IT consultant."
+        />
+
+        <div class="space-y-8 mt-5 border-l-2 border-dashed border-slate-400">
+            {
+                experiences.map((item) => (
+                    <div class="pl-10 relative">
+                        <div class="bg-white rounded w-fit p-2 absolute -left-4 top-0 shadow-md">
+                            <i data-lucide="folder-closed" class="size-4 text-sky-500" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-sky-500">{item.company}</h3>
+                            <span class="text-slate-100 bg-slate-200/50 p-1 px-4 uppercase rounded-full text-xs">
+                                {item.type}
+                            </span>
+                        </div>
+
+                        <ul class="mt-1 space-y-2">
+                            {item.items.map((subItem) => (
+                                <li class="mt-4">
+                                    <h4 class="text-md font-light font-mono">{subItem.role}</h4>
+                                    <span class="text-slate-500 text-[10px] lg:text-sm">{subItem.year}</span>
+                                    <p class="text-slate-300 text-xs lg:text-lg">{subItem.desc}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+{
+    "en": {
+        "title": "FEATURED PROJECTS",
+        "subtitle": "Here are some of my top projects that showcase my skills and expertise in software development and IT consulting.",
+        "cta_view_details": "View Details",
+        "cta_view_all_projects": "View All Projects"
+    },
+    "id": {
+        "title": "PROYEK UNGGULAN",
+        "subtitle": "Berikut adalah beberapa proyek unggulan saya yang menunjukkan keahlian saya dalam pengembangan perangkat lunak dan konsultasi IT.",
+        "cta_view_details": "Lihat Detail",
+        "cta_view_all_projects": "Lihat Semua Proyek"
+    }
+}

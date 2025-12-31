@@ -5,16 +5,18 @@ import Footer from '../components/Footer.astro'
 import BackgroundMain from '../components/LandingPageComponents/BackgroundMain.astro'
 
 const {
-  title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
-  description = 'Software engineer specializing in modern web development, mobile apps, and IT consulting.',
-  image = '/default-og.png',
+    title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
+    description = 'Software engineer specializing in modern web development, mobile apps, and IT consulting.',
+    image = '/default-og.png',
 } = Astro.props
 
 const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
+const language = Astro.props.lang || 'en'
 ---
 
+
 <!doctype html>
-<html lang="en">
+<html lang={language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -72,27 +74,6 @@ const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
       content="Software engineer specializing in modern web development, mobile apps, and IT consulting with experience in Laravel, React, Astro, and mobile applications."
     />
 
-    <!-- <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Adi Aulia Rahman",
-        "jobTitle": "Software Engineer",
-        "url": "https://adiauliarahman.dev",
-        "sameAs": [
-          "https://github.com/adiarhmn",
-          "https://www.instagram.com/adiarcoding"
-        ]
-      }
-    </script> -->
-
-    <!-- FONT -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

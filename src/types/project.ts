@@ -1,4 +1,5 @@
 export interface Project {
+  id: string
   title: string
   year: string
   desc: string

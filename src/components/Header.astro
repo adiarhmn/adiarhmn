@@ -5,6 +5,7 @@ import { switchLangPath } from '../i18n/index'
 
 const BASE_URL = import.meta.env.BASE_URL
 const pathname = Astro.url.pathname
+const lang = pathname.split('/')[1] === 'id' ? 'id' : 'en'
 ---
 
 <header class="fixed inset-x-0 top-0 backdrop-blur-md z-50">
@@ -19,15 +20,21 @@ const pathname = Astro.url.pathname
 
         <!-- Desktop Menu -->
         <ul class="hidden md:flex gap-7 font-medium">
-            <li><a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}`}>Home</a></li>
+            <li><a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}`}>Home</a></li>
             <li>
-                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}about-me`}>About Me</a>
+                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}/about-me`}
+                    >About Me</a
+                >
             </li>
             <li>
-                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}contact-me`}>Contact Me</a>
+                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}/contact-me`}
+                    >Contact Me</a
+                >
             </li>
             <li>
-                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}projects`}>Projects</a>
+                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}projects`}
+                    >Projects</a
+                >
             </li>
             <li><a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}blog`}>Blog</a></li>
             <li>
