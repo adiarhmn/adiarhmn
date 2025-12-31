@@ -1,0 +1,99 @@
+---
+import '../css/index.css'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import BackgroundMain from '../components/LandingPageComponents/BackgroundMain.astro'
+
+const {
+    title = 'Adi Aulia Rahman — Software Engineer & IT Consultant',
+    description = 'Software engineer specializing in modern web development, mobile apps, and IT consulting.',
+    image = '/default-og.png',
+} = Astro.props
+
+const SITE = import.meta.env.SITE || 'https://adiauliarahman.dev'
+const language = Astro.props.lang || 'en'
+---
+
+
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+     <!-- Dynamic Title -->
+    <title>{title}</title>
+
+    <!-- Dynamic Description -->
+    <meta name="description" content={description} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={SITE} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={SITE} />
+
+     <!-- Open Graph Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={SITE} />
+    <meta property="og:image" content={image} />
+
+      <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+     <!-- Google Verification -->
+    <meta
+      name="google-site-verification"
+      content="0JFQ7-a8ShzP9xkC6iSn15WtRdWDOCU6rqMOh-79RgE"
+    />
+
+      {SITE === "https://adiauliarahman.dev" && (
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Adi Aulia Rahman",
+          "jobTitle": "Software Engineer",
+          "url": "https://adiarhmn.dev",
+          "sameAs": [
+            "https://github.com/adiarhmn",
+            "https://www.instagram.com/adiarcoding"
+          ]
+        })}
+      </script>
+    )}
+
+    <meta
+      name="description"
+      content="Software engineer specializing in modern web development, mobile apps, and IT consulting with experience in Laravel, React, Astro, and mobile applications."
+    />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <!-- Dev Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+     <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+ </head>
+
+  <body class="font-jakarta antialiased text-slate-400 bg-black">
+      <BackgroundMain />
+      <slot />
+  </body>
+</html>

@@ -1,0 +1,25 @@
+---
+import BlankLayout from '../layouts/BlankLayout.astro'
+---
+
+<BlankLayout>
+    <div class="min-h-screen flex flex-col">
+        <main class="grow flex items-center justify-center">
+            <div class="text-center">
+                <h1 class="font-anton text-[10rem]">404</h1>
+                <p class="text-center mt-4 text-slate-400">Oops! The page you are looking for does not exist.</p>
+                <a
+                    href="/"
+                    class="mt-6 inline-block bg-sky-600/40 gap-3 items-center border border-sky-500 text-sky-200 p-2 rounded-xl px-5 w-fit hover:bg-sky-600/70 shadow-lg shadow-sky-500/50 transition-all duration-200 ease-in-out hover:shadow-sky-500 hover:scale-98"
+                >
+                    Go Back Home
+                </a>
+            </div>
+        </main>
+        <footer>
+            <div class="text-center p-5 text-sm text-slate-500">
+                &copy; {new Date().getFullYear()} Adi Aulia Rahman. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</BlankLayout>
