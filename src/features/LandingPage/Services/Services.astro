@@ -1,10 +1,13 @@
 ---
 import HeadLabelSection from '../../../components/ui/HeadLabelSection.astro'
 import content from './content.json'
+import { ServicesData } from './data'
 
 const { lang } = Astro.props as { lang: 'en' | 'id' }
 
 const t = content[lang]
+
+const services = ServicesData[lang]
 ---
 
 <section class="pb-20 z-2 px-10 lg:px-30 mt-20">
@@ -12,28 +15,20 @@ const t = content[lang]
         <!-- Services Section -->
         <HeadLabelSection title={t.title} description={t.subtitle} />
         <!-- Add your services content here -->
-        <div>
-            <ul class="grid grid-cols-4">
-                <li>
-                    <div class="bg-black p-3 rounded-xl">
-                        <strong>Web Development</strong>
-                        <p class="text-slate-300 text-xs mt-2">
-                            Building responsive and dynamic websites using modern frameworks.
-                        </p>
-                    </div>
-                    <div class="bg-black p-3 rounded-xl">
-                        <strong>Web Development</strong>
-                        <p class="text-slate-300 text-xs mt-2">
-                            Building responsive and dynamic websites using modern frameworks.
-                        </p>
-                    </div>
-                    <div class="bg-black p-3 rounded-xl">
-                        <strong>Web Development</strong>
-                        <p class="text-slate-300 text-xs mt-2">
-                            Building responsive and dynamic websites using modern frameworks.
-                        </p>
-                    </div>
-                </li>
+        <div class="bg-black rounded-3xl border border-slate-700 mt-10 relative">
+            <ul class="grid grid-cols-1 md:grid-cols-3 p-5 lg:p-10 gap-4">
+                {
+                    services.map((service, index) => (
+                        <li class={`${index % 3 !== 2 ? 'lg:border-r-2 border-dashed border-slate-700 pr-5' : ''} pb-4`}>
+                            <div class="text-center lg:px-5">
+                                <h3 class="font-bold text-lg mb-1 py-1 text-transparent bg-linear-to-r from-sky-500 to-sky-950 bg-clip-text">
+                                    {service.title}
+                                </h3>
+                                <p class=" text-xs lg:text-sm text-slate-300">{service.description}</p>
+                            </div>
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     </div>
