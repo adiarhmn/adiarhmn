@@ -85,22 +85,37 @@
 }
 
 @keyframes float-random {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.25;
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.25;
-  }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.25;
+    }
 }
 
 .floating-icon {
-  position: absolute;
-  animation: float-random 6s ease-in-out infinite;
+    position: absolute;
+    animation: float-random 6s ease-in-out infinite;
 }
 
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
