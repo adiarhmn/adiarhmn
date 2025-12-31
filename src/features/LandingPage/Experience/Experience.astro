@@ -1,18 +1,17 @@
 ---
 import HeadLabelSection from '../../../components/ui/HeadLabelSection.astro'
 import { ExperienceData, type Experience } from './data'
+import content from './content.json'
 const { lang } = Astro.props as { lang: 'en' | 'id' }
 const experiences = ExperienceData[lang] as Experience[]
+const t = content[lang]
 console.log(experiences, lang)
 ---
 
 <section class="pb-20 z-2 px-10 lg:px-30 mt-20">
     <div class="w-full">
         <!-- Experience Section -->
-        <HeadLabelSection
-            title="EXPERIENCE"
-            description="Here are some of my professional experiences that highlight my journey and growth as a software engineer and IT consultant."
-        />
+        <HeadLabelSection title={t.title} description={t.subtitle} />
 
         <div class="space-y-8 mt-5 border-l-2 border-dashed border-slate-400">
             {

@@ -5,6 +5,7 @@ import HeadLabelSection from '../../components/ui/HeadLabelSection.astro'
 import FeaturedProjects from '../../features/LandingPage/FeaturedProjects/FeaturedProjects.astro'
 import Experience from '../../features/LandingPage/Experience/Experience.astro'
 import { staticPaths } from '../../i18n/index.ts'
+import Services from '../../features/LandingPage/Services/Services.astro'
 
 const BASE_URL = import.meta.env.BASE_URL
 const { lang } = Astro.params
@@ -29,5 +30,7 @@ if (lang !== 'en' && lang !== 'id') {
     <Experience lang={lang} />
 
     <!-- Services Section -->
+    <Services lang={lang} />
+    
     <!-- Contact Section -->
 </Layout>

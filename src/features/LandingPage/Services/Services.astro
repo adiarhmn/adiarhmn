@@ -1,0 +1,40 @@
+---
+import HeadLabelSection from '../../../components/ui/HeadLabelSection.astro'
+import content from './content.json'
+
+const { lang } = Astro.props as { lang: 'en' | 'id' }
+
+const t = content[lang]
+---
+
+<section class="pb-20 z-2 px-10 lg:px-30 mt-20">
+    <div class="w-full">
+        <!-- Services Section -->
+        <HeadLabelSection title={t.title} description={t.subtitle} />
+        <!-- Add your services content here -->
+        <div>
+            <ul class="grid grid-cols-4">
+                <li>
+                    <div class="bg-black p-3 rounded-xl">
+                        <strong>Web Development</strong>
+                        <p class="text-slate-300 text-xs mt-2">
+                            Building responsive and dynamic websites using modern frameworks.
+                        </p>
+                    </div>
+                    <div class="bg-black p-3 rounded-xl">
+                        <strong>Web Development</strong>
+                        <p class="text-slate-300 text-xs mt-2">
+                            Building responsive and dynamic websites using modern frameworks.
+                        </p>
+                    </div>
+                    <div class="bg-black p-3 rounded-xl">
+                        <strong>Web Development</strong>
+                        <p class="text-slate-300 text-xs mt-2">
+                            Building responsive and dynamic websites using modern frameworks.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
