@@ -1,4 +1,32 @@
 ---
+import Layout from '../layouts/Layout.astro'
+import HeroSection from '../features/LandingPage/Hero/Hero.astro'
+import FeaturedProjects from '../features/LandingPage/FeaturedProjects/FeaturedProjects.astro'
+import Experience from '../features/LandingPage/Experience/Experience.astro'
+import { staticPaths } from '../i18n/index.ts'
+
 const BASE_URL = import.meta.env.BASE_URL
-return Astro.redirect(`${BASE_URL}en/`)
+const { lang } = Astro.params
+
+export function getStaticPaths() {
+    return staticPaths()
+}
+
+if (lang !== 'en' && lang !== 'id') {
+    return Astro.redirect(`${BASE_URL}en/`)
+}
 ---
+
+<Layout lang={lang}>
+    <!-- Hero Section -->
+    <HeroSection lang={lang} />
+
+    <!-- Projects Section -->
+    <FeaturedProjects lang={lang} />
+
+    <!-- Experience Section -->
+    <Experience lang={lang} />
+
+    <!-- Services Section -->
+    <!-- Contact Section -->
+</Layout>
