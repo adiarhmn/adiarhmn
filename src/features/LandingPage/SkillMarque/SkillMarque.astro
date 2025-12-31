@@ -1,0 +1,59 @@
+---
+const myskills = [
+    {
+        icon: 'devicon-typescript-plain',
+        name: 'Typescript',
+    },
+    {
+        icon: 'devicon-nextjs-plain',
+        name: 'Next.js',
+    },
+    {
+        icon: 'devicon-react-original',
+        name: 'React',
+    },
+    {
+        icon: 'devicon-vuejs-plain',
+        name: 'Vue.js',
+    },
+    {
+        icon: 'devicon-laravel-plain',
+        name: 'Laravel',
+    },
+    {
+        icon: 'devicon-astro-plain',
+        name: 'Astro',
+    },
+    {
+        icon: 'devicon-tailwindcss-plain',
+        name: 'Tailwind CSS',
+    },
+    {
+        icon: 'devicon-supabase-plain',
+        name: 'Supabase',
+    },
+]
+---
+
+<div class="marquee relative py-3">
+    <div class="bg-linear-to-r from-sky-700 to-transparent h-full w-1/3 left-0 top-0 absolute z-1"></div>
+    <div class="bg-linear-to-l from-sky-700 to-transparent h-full w-1/3 right-0 top-0 absolute z-1"></div>
+    <div class="marquee__track">
+        {
+            myskills.map((item) => (
+                <div class="marquee__item flex items-center">
+                    <i class={item.icon + ' text-3xl text-slate-300 mx-2'} />
+                    <span>{item.name}</span>
+                </div>
+            ))
+        }
+        {
+            myskills.map((item) => (
+                <div class="marquee__item flex items-center">
+                    <i class={item.icon + ' text-3xl text-slate-300 mx-2'} />
+                    <span>{item.name}</span>
+                </div>
+            ))
+        }
+    </div>
+</div>

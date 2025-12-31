@@ -119,3 +119,31 @@
 .floating {
     animation: floating 3s ease-in-out infinite;
 }
+
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    background: transparent;
+}
+
+.marquee__track {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee__item {
+    white-space: nowrap;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
