@@ -11,29 +11,84 @@ export function getStaticPaths() {
 if (lang !== 'en' && lang !== 'id') {
     return Astro.redirect(`${BASE_URL}en/`)
 }
+
+function handleChangeCategroies() {
+    console.log('change')
+}
 ---
 
 <Layout>
-    <section class="min-h-screen mt-25 lg:px-20">
-        <h1 class="text-4xl font-bold mb-6 font-anton">My Blogs</h1>
-        <p class="text-lg">Welcome to the blogs page in {lang === 'en' ? 'English' : 'Indonesian'}!</p>
+    <section class="min-h-screen mt-25 px-5 lg:px-20">
+        <div class="text-start max-w-xl mb-16">
+            <div
+                class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
+            >
+                MY BLOGS
+            </div>
+            <p class="text-xs lg:text-base">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tempora veritatis exercitationem
+                accusamus doloribus impedit vel unde.
+            </p>
+        </div>
 
-        <ul class="flex flex-col divide-y divide-slate-700">
-            <li class="p-5">
-                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                <span class="font-mono">By Adi Aulia Rahman</span>
-                <p>Blog post summary or excerpt goes here...</p>
-            </li>
-            <li class="p-5">
-                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                <span class="font-mono">By Adi Aulia Rahman</span>
-                <p>Blog post summary or excerpt goes here...</p>
-            </li>
-            <li class="p-5">
-                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                <span class="font-mono">By Adi Aulia Rahman</span>
-                <p>Blog post summary or excerpt goes here...</p>
-            </li>
-        </ul>
+        <div class="grid grid-cols-6 gap-10">
+            <div class="col-span-6 lg:col-span-2">
+                <div class="p-10 bg-black/30 backdrop-blur-xs rounded-xl min-h-full">
+                    <div class="text-lg font-bold text-slate-300">Categories</div>
+                    <div class="flex flex-col mt-5">
+                        <div class="flex items-center gap-3">
+                            <input
+                                type="checkbox"
+                                class="bg-transparent category-checkbox appearance-none rounded border border-slate-500 w-4 h-4 checked:bg-sky-500 checked:border-sky-500 checked:ring-3 ring-sky-500/50 transition-all duration-200 ease-in-out"
+                                id="categories-1"
+                                onchange="handleCategoriesChange(this)"
+                            />
+                            <label for="categories-1" class="text-slate-300"> Category 1</label>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <input
+                                type="checkbox"
+                                class="bg-transparent category-checkbox appearance-none rounded border border-slate-500 w-4 h-4 checked:bg-sky-500 checked:border-sky-500 checked:ring-3 ring-sky-500/50 transition-all duration-200 ease-in-out"
+                                id="categories-2"
+                            />
+                            <label for="categories-2" class="text-slate-300"> Category 2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-6 lg:col-span-4">
+                <ul class="flex flex-col divide-y divide-slate-700">
+                    <li class="p-5">
+                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                        <span class="font-mono">By Adi Aulia Rahman</span>
+                        <p>Blog post summary or excerpt goes here...</p>
+                    </li>
+                    <li class="p-5">
+                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                        <span class="font-mono">By Adi Aulia Rahman</span>
+                        <p>Blog post summary or excerpt goes here...</p>
+                    </li>
+                    <li class="p-5">
+                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                        <span class="font-mono">By Adi Aulia Rahman</span>
+                        <p>Blog post summary or excerpt goes here...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
+
+    <script slot="scripts">
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.category-checkbox')
+
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener('change', (e) => {
+                    console.log('Category changed:', e.target.id, e.target.checked)
+                })
+            })
+        })
+    </script>
 </Layout>

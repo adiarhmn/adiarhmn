@@ -1,4 +1,5 @@
 ---
+import Experience from '../../features/LandingPage/Experience/Experience.astro'
 import Layout from '../../layouts/Layout.astro'
 import { staticPaths } from '../../utils/i18n'
 
@@ -14,9 +15,156 @@ if (lang !== 'en' && lang !== 'id') {
 ---
 
 <Layout>
-    <section class="min-h-screen mt-25 lg:px-20">
-        <h1 class="text-4xl font-bold mb-6 font-anton">About Me</h1>
-
-    
+    <!-- About Me -->
+    <section class="mt-25 lg:mt-40 px-5 lg:px-20">
+        <div class="flex gap-10 flex-col lg:flex-row bg-black/20 p-5 lg:p-10 rounded-3xl backdrop-blur-sm">
+            <div
+                class="w-full max-w-50 lg:max-w-70 shadow-lg shadow-sky-200 rounded-full p-2 bg-slate-200 mx-auto overflow-hidden"
+            >
+                <img
+                    src="/me/profile.jpg"
+                    alt="Profile Adi Aulia Rahman"
+                    class="w-full h-full object-cover rounded-full"
+                />
+            </div>
+            <div>
+                <div class="text-start max-w-xl mb-4">
+                    <div
+                        class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
+                    >
+                        ABOUT ME
+                    </div>
+                </div>
+                <p class="text-xs lg:text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, laborum praesentium ut totam officia
+                    illum excepturi rerum autem! Quasi, accusantium officiis harum minima laudantium quod vero sit
+                    suscipit nostrum dicta, nobis, sapiente nesciunt laboriosam? Voluptas quod deserunt culpa?
+                    Accusantium qui architecto animi odit ut, nobis ex quas? Perspiciatis quia pariatur atque possimus
+                    officia sapiente, praesentium, nihil aspernatur iure beatae quibusdam quas distinctio ut animi
+                    nesciunt voluptas, a corporis. Mollitia, aspernatur vel laboriosam adipisci necessitatibus
+                    reiciendis vero id eos laudantium facere deleniti neque quis? Placeat vel nulla cupiditate alias
+                    adipisci beatae suscipit odit! Dolores ad ipsam recusandae, animi eveniet praesentium laborum.
+                </p>
+                <div class="pt-10">
+                    <a
+                        href=""
+                        class="bg-sky-500/50 border border-sky-500 hover:bg-sky-500/70 shadow-md hover:shadow-lg shadow-sky-500 text-white rounded-md py-1 px-4 text-xs transition-all duration-300 ease-in-out lg:text-sm lg:py-2"
+                        >Download Resume</a
+                    >
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section class="px-5 lg:px-20 mt-16">
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- Education -->
+            <div>
+                <div class="text-start max-w-xl mb-4">
+                    <div
+                        class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
+                    >
+                        EDUCATION
+                    </div>
+                </div>
+                <div>
+                    <ul class="flex flex-col gap-3 divide-y divide-slate-700">
+
+                         <!-- SDN ANGSAU 3 -->
+                        <li class="flex gap-5 text-xs lg:text-sm">
+                            <div
+                                class="font-anton text-2xl bg-clip-text bg-linear-to-b from-sky-500 to-transparent text-transparent"
+                            >
+                                1
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between w-full">
+                                    <h3 class="_name-school font-bold uppercase text-slate-200 ">SDN ANGSAU 3</h3>
+                                    <span class="font-mono text-slate-400">2008 - 2014</span>
+                                </div>
+                                <p class="font-mono text-slate-400">
+                                    <strong class="text-slate-400">Elementary School</strong> |
+                                    <strong class="text-sky-500"> - </strong>
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- MTSN 2 TANAH LAUT -->
+                        <li class="flex gap-5 text-xs lg:text-sm">
+                            <div
+                                class="font-anton text-2xl bg-clip-text bg-linear-to-b from-sky-500 to-transparent text-transparent"
+                            >
+                                2
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between w-full">
+                                    <h3 class="_name-school font-bold uppercase text-slate-200">MTSN 2 TANAH LAUT</h3>
+                                    <span class="font-mono text-slate-400">2008 - 2014</span>
+                                </div>
+                                <p class="font-mono text-slate-400">
+                                    <strong class="text-slate-400">Junior High School</strong> |
+                                    <strong class="text-sky-500"> - </strong>
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- SMAN 1 PELAIHARI -->
+                        <li class="flex gap-5 text-xs lg:text-sm">
+                            <div
+                                class="font-anton text-2xl bg-clip-text bg-linear-to-b from-sky-500 to-transparent text-transparent"
+                            >
+                                3
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between w-full">
+                                    <h3 class="_name-school font-bold uppercase text-slate-200">SMAN 1 PELAIHARI</h3>
+                                    <span class="font-mono text-slate-400">2008 - 2014</span>
+                                </div>
+                                <p class="font-mono text-slate-400">
+                                    <strong class="text-slate-400">High School</strong> | Science |
+                                    <strong class="text-sky-500"> - </strong>
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- POLITEKNIK NEGERI TANAH LAUT -->
+                        <li class="flex gap-5 text-xs lg:text-sm">
+                            <div
+                                class="font-anton text-2xl bg-clip-text bg-linear-to-b from-sky-500 to-transparent text-transparent"
+                            >
+                                4
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between w-full">
+                                    <h3 class="_name-school font-bold uppercase text-slate-200">POLITEKNIK NEGERI TANAH LAUT</h3>
+                                    <span class="font-mono text-slate-400">2008 - 2014</span>
+                                </div>
+                                <p class="font-mono text-slate-400">
+                                    <strong class="text-slate-400">Associate Degree (D3)</strong> | Information Technology
+                                    |
+                                    <strong class="text-sky-500">IPK 3.96 / 4</strong>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <div class="text-start max-w-xl mb-4">
+                    <div
+                        class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
+                    >
+                        CONTACT
+                    </div>
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga ab, aliquid atque mollitia fugiat modi. Esse totam ipsam ab quis perferendis sed repellendus laboriosam, quibusdam, ut, nihil delectus illum?
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Experience lang={lang} />
 </Layout>
