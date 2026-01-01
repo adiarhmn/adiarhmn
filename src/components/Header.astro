@@ -32,11 +32,11 @@ const lang = pathname.split('/')[1] === 'id' ? 'id' : 'en'
                 >
             </li>
             <li>
-                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}projects`}
+                <a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}/projects`}
                     >Projects</a
                 >
             </li>
-            <li><a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}blog`}>Blog</a></li>
+            <li><a class="hover:text-gray-300 text-slate-300 hover:underline" href={`${BASE_URL}${lang}/blogs`}>Blogs</a></li>
             <li>
                 <div class="flex gap-2 font-bold">
                     <a class="text-sky-500" href={switchLangPath(pathname, 'id')}>ID</a>
@@ -66,7 +66,7 @@ const lang = pathname.split('/')[1] === 'id' ? 'id' : 'en'
             <li><a class="block hover:underline" href="/about">About Me</a></li>
             <li><a class="block hover:underline" href="/contact">Contact Me</a></li>
             <li><a class="block hover:underline" href="/projects">Projects</a></li>
-            <li><a class="block hover:underline" href="/blog">Blog</a></li>
+            <li><a class="block hover:underline" href="/blogs">Blogs</a></li>
             <!-- <li><a class="block hover:underline" href={switchLang}>Blog</a></li> -->
         </ul>
     </div>

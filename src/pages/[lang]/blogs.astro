@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { staticPaths } from '../../utils/i18n'
+
+const { lang } = Astro.params
+
+export function getStaticPaths() {
+    return staticPaths()
+}
+
+if (lang !== 'en' && lang !== 'id') {
+    return Astro.redirect(`${BASE_URL}en/`)
+}
+---
+
+<Layout>
+    <section class="min-h-screen mt-25 lg:px-20">
+        <h1 class="text-4xl font-bold mb-6 font-anton">My Blogs</h1>
+        <p class="text-lg">Welcome to the blogs page in {lang === 'en' ? 'English' : 'Indonesian'}!</p>
+
+        <ul class="flex flex-col divide-y divide-slate-700">
+            <li class="p-5">
+                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                <span class="font-mono">By Adi Aulia Rahman</span>
+                <p>Blog post summary or excerpt goes here...</p>
+            </li>
+            <li class="p-5">
+                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                <span class="font-mono">By Adi Aulia Rahman</span>
+                <p>Blog post summary or excerpt goes here...</p>
+            </li>
+            <li class="p-5">
+                <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
+                <span class="font-mono">By Adi Aulia Rahman</span>
+                <p>Blog post summary or excerpt goes here...</p>
+            </li>
+        </ul>
+    </section>
+</Layout>
