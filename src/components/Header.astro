@@ -57,11 +57,17 @@ const lang = pathname.split('/')[1] === 'id' ? 'id' : 'en'
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden shadow">
         <ul class="flex flex-col gap-5 px-5 py-4 font-medium">
-            <li><a class="block hover:underline" href="/">Home</a></li>
-            <li><a class="block hover:underline" href="/about">About Me</a></li>
-            <li><a class="block hover:underline" href="/contact">Contact Me</a></li>
-            <li><a class="block hover:underline" href="/projects">Projects</a></li>
-            <li><a class="block hover:underline" href="/blogs">Blogs</a></li>
+            <li><a class="block hover:underline"  href={`${BASE_URL}${lang}`}>Home</a></li>
+            <li><a class="block hover:underline"  href={`${BASE_URL}${lang}/about-me`}>About Me</a></li>
+            <li><a class="block hover:underline"  href={`${BASE_URL}${lang}/projects`}>Projects</a></li>
+            <li><a class="block hover:underline"  href={`${BASE_URL}${lang}/blogs`}>Blogs</a></li>
+            <li>
+                <div class="flex gap-2 font-bold">
+                    <a class="text-sky-500" href={switchLangPath(pathname, 'id')}>ID</a>
+                    <span>|</span>
+                    <a class="text-sky-500" href={switchLangPath(pathname, 'en')}>EN</a>
+                </div>
+            </li>
             <!-- <li><a class="block hover:underline" href={switchLang}>Blog</a></li> -->
         </ul>
     </div>
