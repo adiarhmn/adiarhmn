@@ -1,0 +1,69 @@
+---
+import CardPrimary from '../../../components/ui/CardPrimary.astro'
+import content from './content.json'
+import { data } from './data'
+
+const BASE_URL = import.meta.env.BASE_URL || 'http://localhost:4321/'
+
+// Props
+const { lang } = Astro.props as { lang: 'en' | 'id' }
+
+const t = content[lang]
+
+const listProjects = data[lang]
+---
+
+<section class="min-h-screen mt-25 px-5 lg:px-20">
+    <div class="text-start max-w-xl mb-16">
+        <div
+            class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
+        >
+            {t.title}
+        </div>
+        <p class="text-xs lg:text-base">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tempora veritatis exercitationem accusamus
+            doloribus impedit vel unde.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-2 lg:gap-4 items-stretch">
+        {
+            listProjects.map((project) => {
+                return (
+                    <CardPrimary>
+                        <div class="flex rounded-xl flex-col h-full overflow-hidden group/card hover:bg-linear-to-t bg-black from-sky-600/50 to-transparent">
+                            <img class="w-full h-40 lg:h-57 object-cover " src={project.image} alt={project.title} />
+                            <div class="p-2 lg:p-4 flex flex-col grow">
+                                <h3 class="lg:text-xl font-bold mb-2 bg-linear-to-r from-sky-500 to-white bg-clip-text text-transparent text-xs">
+                                    {project.title}
+                                </h3>
+                                <p class="grow font-light mb-4 text-slate-300 text-[10px] lg:text-sm">{project.desc}</p>
+                                <div class="flex gap-2 mb-4 rounded-l-md">
+                                    {project.stackIcons?.map((icon) => (
+                                        <div class="bg-slate-200 w-fit h-fit px-1 rounded">
+                                            <i class={icon} />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {project.link ? (
+                                    <a
+                                        href={BASE_URL + project.link}
+                                        class="text-xs mb-1 text-center text-sky-500 bg-sky-300/20 border border-sky-800 rounded-lg py-1 lg:py-2 font-normal flex justify-center items-center gap-2 group-hover/card:translate-y-0 translate-y-1 opacity-100 group-hover/card:opacity-100 transition-all duration-300"
+                                    >
+                                        {t.cta_view_details}
+                                        <i data-lucide="arrow-right" class="size-3" />
+                                    </a>
+                                ) : (
+                                    <div class="text-xs mb-1 text-center text-slate-500 bg-slate-300/10 border border-slate-800 rounded-lg py-1 lg:py-2 font-normal flex justify-center items-center gap-2 group-hover/card:translate-y-0 translate-y-1 opacity-100 group-hover/card:opacity-100 transition-all duration-300">
+                                        In Progress
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </CardPrimary>
+                )
+            })
+        }
+    </div>
+</section>

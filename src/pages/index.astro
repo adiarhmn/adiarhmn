@@ -2,7 +2,10 @@
 import Layout from '../layouts/Layout.astro'
 import HeroSection from '../features/LandingPage/Hero/Hero.astro'
 import FeaturedProjects from '../features/LandingPage/FeaturedProjects/FeaturedProjects.astro'
-import Experience from '../features/LandingPage/Experience/Experience.astro'
+import Services from '../features/LandingPage/Services/Services.astro'
+import SkillMarque from '../features/LandingPage/SkillMarque/SkillMarque.astro'
+import LatestBlogs from '../features/LandingPage/LatestBlogs/LatestBlogs.astro'
+import WhatsappFloating from '../components/WhatsappFloating.astro'
 const lang = 'en'
 ---
 
@@ -10,12 +13,20 @@ const lang = 'en'
     <!-- Hero Section -->
     <HeroSection lang={lang} />
 
+    <!-- About Me [Simple] -->
+
     <!-- Projects Section -->
     <FeaturedProjects lang={lang} />
 
-    <!-- Experience Section -->
-    <Experience lang={lang} />
-
     <!-- Services Section -->
-    <!-- Contact Section -->
+    <Services lang={lang} />
+
+    <!-- Skill Marque -->
+    <SkillMarque lang={lang} />
+
+    <!-- Latest Blogs -->
+    <LatestBlogs lang={lang} />
+
+    <!-- WhatsApp Floating -->
+    <WhatsappFloating />
 </Layout>
