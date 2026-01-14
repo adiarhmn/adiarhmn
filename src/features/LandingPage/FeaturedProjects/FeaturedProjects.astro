@@ -59,11 +59,12 @@ const topProjectsData = FeaturedProjectsData[lang]
                 )
             })
         }
-        <div
+        <a 
+            href={`${BASE_URL}${lang}/projects`}
             class="text-white mt-4 font-bold bg-linear-to-r from-sky-500 to-transparent text-xs p-2 px-3 rounded-lg flex items-center gap-4 w-fit hover:scale-103 cursor-pointer text-nowrap"
         >
             {t.cta_view_all_projects}
             <i data-lucide="arrow-right" class="size-3"></i>
-        </div>
+        </a>
     </div>
 </section>
