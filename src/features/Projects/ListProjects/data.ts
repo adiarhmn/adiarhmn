@@ -102,6 +102,31 @@ export const data: ListAllProject = {
                 'devicon-azuresqldatabase-plain colored',
             ],
         },
+          {
+            id: 'wa-gateway-api',
+            year: 'Okt 2024 - Jan 2025',
+            title: 'WA Gateway API',
+            desc: 'WA Gateway API.',
+            image: '/projects/coming-soon.png',
+            stackIcons: [
+                'devicon-express-original colored',
+                'devicon-prisma-plain colored',
+                'devicon-postgresql-plain colored',
+                'devicon-azuresqldatabase-plain colored',
+            ],
+        },
+        {
+            id: 'recruitment-system',
+            year: 'Okt 2024 - Jan 2025',
+            title: 'Recruitment System',
+            desc: 'Recruitment System.',
+            image: '/projects/coming-soon.png',
+            stackIcons: [
+                'devicon-laravel-plain colored',
+                'devicon-tailwindcss-plain colored',
+                'devicon-azuresqldatabase-plain colored',
+            ],
+        },
     ],
 
     // EN DATA
@@ -197,6 +222,31 @@ export const data: ListAllProject = {
             stackIcons: [
                 'devicon-laravel-plain colored',
                 'devicon-bootstrap-plain colored',
+                'devicon-azuresqldatabase-plain colored',
+            ],
+        },
+        {
+            id: 'wa-gateway-api',
+            year: 'Okt 2024 - Jan 2025',
+            title: 'WA Gateway API',
+            desc: 'WA Gateway API.',
+            image: '/projects/coming-soon.png',
+            stackIcons: [
+                'devicon-express-original colored',
+                'devicon-prisma-plain colored',
+                'devicon-postgresql-plain colored',
+                'devicon-azuresqldatabase-plain colored',
+            ],
+        },
+        {
+            id: 'recruitment-system',
+            year: 'Okt 2024 - Jan 2025',
+            title: 'Recruitment System',
+            desc: 'Recruitment System.',
+            image: '/projects/coming-soon.png',
+            stackIcons: [
+                'devicon-laravel-plain colored',
+                'devicon-tailwindcss-plain colored',
                 'devicon-azuresqldatabase-plain colored',
             ],
         },
