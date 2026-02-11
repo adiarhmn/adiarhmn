@@ -8,6 +8,7 @@ interface Props {
 const { lang } = Astro.props
 
 const t = content[lang]
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <section class="flex flex-col justify-center w-full min-h-screen mb-8">
@@ -63,7 +64,7 @@ const t = content[lang]
             {t.cta_2}
         </button>
         <a
-            href="./CV_ADI_AULIA_RAHMAN.pdf"
+            href={BASE_URL + "CV_ADI_AULIA_RAHMAN.pdf"}
             class="bg-slate-600/40 flex gap-3 items-center border border-slate-500 text-slate-200 p-2 rounded-xl px-5 w-fit hover:bg-slate-600/70 shadow-lg shadow-slate-500/50 transition-all duration-200 ease-in-out hover:shadow-slate-500 hover:scale-98"
         >
             <i data-lucide="file-text" class="size-5"></i>
