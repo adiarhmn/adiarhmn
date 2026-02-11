@@ -2,7 +2,7 @@
 import content from './content.json'
 
 interface Props {
-    lang: 'en' | 'id';
+    lang: 'en' | 'id'
 }
 
 const { lang } = Astro.props
@@ -62,5 +62,12 @@ const t = content[lang]
             <i data-lucide="mail" class="size-5"></i>
             {t.cta_2}
         </button>
+        <a
+            href="/public/CV_ADI_AULIA_RAHMAN.pdf"
+            class="bg-slate-600/40 flex gap-3 items-center border border-slate-500 text-slate-200 p-2 rounded-xl px-5 w-fit hover:bg-slate-600/70 shadow-lg shadow-slate-500/50 transition-all duration-200 ease-in-out hover:shadow-slate-500 hover:scale-98"
+        >
+            <i data-lucide="file-text" class="size-5"></i>
+            Download CV
+        </a>
     </div>
 </section>
