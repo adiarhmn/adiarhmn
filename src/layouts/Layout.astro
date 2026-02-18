@@ -111,11 +111,37 @@ const language = Astro.props.lang || 'en'
       <Footer />
 
 
-    <!-- Production version -->
+     <!-- Production version -->
     <script src="https://unpkg.com/lucide@latest"></script>
-   
+
     <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
+
+    });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale').forEach((el) => {
+          observer.observe(el);
+        });
+      });
     </script>
     <slot name="scripts" />
   </body>

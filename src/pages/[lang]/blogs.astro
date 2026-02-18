@@ -1,6 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import { staticPaths } from '../../utils/i18n'
+import content from '../../features/Blogs/content.json'
+import { blogPosts, categories, categoryLabels } from '../../features/Blogs/data'
+
+interface Props {
+    lang: 'en' | 'id'
+}
 
 const { lang } = Astro.params
 
@@ -9,84 +15,108 @@ export function getStaticPaths() {
 }
 
 if (lang !== 'en' && lang !== 'id') {
+    const BASE_URL = import.meta.env.BASE_URL
     return Astro.redirect(`${BASE_URL}en/`)
 }
 
-function handleChangeCategroies() {
-    console.log('change')
-}
+const t = content[lang]
+const posts = blogPosts[lang]
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
-<Layout>
+<Layout lang={lang}>
     <section class="min-h-screen mt-25 px-5 lg:px-20">
         <div class="text-start max-w-xl mb-16">
-            <div
-                class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
-            >
-                MY BLOGS
-            </div>
-            <p class="text-xs lg:text-base">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tempora veritatis exercitationem
-                accusamus doloribus impedit vel unde.
+            <h1 class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent">
+                {t.title}
+            </h1>
+            <p class="text-xs lg:text-base mt-4">
+                {t.subtitle}
             </p>
         </div>
 
         <div class="grid grid-cols-6 gap-10">
             <div class="col-span-6 lg:col-span-2">
-                <div class="p-10 bg-black/30 backdrop-blur-xs rounded-xl min-h-full">
-                    <div class="text-lg font-bold text-slate-300">Categories</div>
-                    <div class="flex flex-col mt-5">
-                        <div class="flex items-center gap-3">
-                            <input
-                                type="checkbox"
-                                class="bg-transparent category-checkbox appearance-none rounded border border-slate-500 w-4 h-4 checked:bg-sky-500 checked:border-sky-500 checked:ring-3 ring-sky-500/50 transition-all duration-200 ease-in-out"
-                                id="categories-1"
-                                onchange="handleCategoriesChange(this)"
-                            />
-                            <label for="categories-1" class="text-slate-300"> Category 1</label>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <input
-                                type="checkbox"
-                                class="bg-transparent category-checkbox appearance-none rounded border border-slate-500 w-4 h-4 checked:bg-sky-500 checked:border-sky-500 checked:ring-3 ring-sky-500/50 transition-all duration-200 ease-in-out"
-                                id="categories-2"
-                            />
-                            <label for="categories-2" class="text-slate-300"> Category 2</label>
-                        </div>
+                <div class="p-6 lg:p-10 bg-black/30 backdrop-blur-xs rounded-xl min-h-full">
+                    <div class="text-lg font-bold text-slate-300">{t.categories_title}</div>
+                    <div class="flex flex-col mt-5 gap-3">
+                        {categories.map((category) => (
+                            <div class="flex items-center gap-3">
+                                <input
+                                    type="checkbox"
+                                    class="category-checkbox bg-transparent appearance-none rounded border border-slate-500 w-4 h-4 checked:bg-sky-500 checked:border-sky-500 checked:ring-3 ring-sky-500/50 transition-all duration-200 ease-in-out cursor-pointer"
+                                    id={`category-${category.id}`}
+                                    data-category={category.id}
+                                />
+                                <label for={`category-${category.id}`} class="text-slate-300 cursor-pointer">
+                                    {categoryLabels[category.id][lang]}
+                                </label>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
+
             <div class="col-span-6 lg:col-span-4">
                 <ul class="flex flex-col divide-y divide-slate-700">
-                    <li class="p-5">
-                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                        <span class="font-mono">By Adi Aulia Rahman</span>
-                        <p>Blog post summary or excerpt goes here...</p>
-                    </li>
-                    <li class="p-5">
-                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                        <span class="font-mono">By Adi Aulia Rahman</span>
-                        <p>Blog post summary or excerpt goes here...</p>
-                    </li>
-                    <li class="p-5">
-                        <h2 class="font-bold text-xl text-slate-200">Blog Post Title</h2>
-                        <span class="font-mono">By Adi Aulia Rahman</span>
-                        <p>Blog post summary or excerpt goes here...</p>
-                    </li>
+                    {posts.map((post) => (
+                        <li class="p-5 hover:bg-sky-900/20 transition-all duration-200 rounded-lg">
+                            <a href={`${BASE_URL}${lang}/blogs/${post.slug}`} class="block">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div class="flex-1">
+                                        <span class="text-xs text-sky-500 font-mono uppercase tracking-wider">
+                                            {categoryLabels[post.category][lang]}
+                                        </span>
+                                        <h2 class="font-bold text-lg lg:text-xl text-slate-200 mt-1 hover:text-sky-400 transition-colors">
+                                            {post.title}
+                                        </h2>
+                                        <div class="flex items-center gap-2 text-slate-500 font-mono mt-2">
+                                            <i data-lucide="calendar" class="size-3"></i>
+                                            <span class="text-xs">{post.date}</span>
+                                            <span class="text-slate-600">|</span>
+                                            <span class="text-xs">{t.by_author}</span>
+                                        </div>
+                                        <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+                                            {post.excerpt}
+                                        </p>
+                                        <span class="inline-flex items-center gap-2 text-sky-500 text-sm mt-4 group">
+                                            {t.read_more}
+                                            <i data-lucide="arrow-right" class="size-4 group-hover:translate-x-1 transition-transform"></i>
+                                        </span>
+                                    </div>
+                                    {post.image && (
+                                        <div class="hidden lg:block w-32 h-24 rounded-lg overflow-hidden shrink-0">
+                                            <img
+                                                src={post.image}
+                                                alt={post.title}
+                                                class="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
+
+                {posts.length === 0 && (
+                    <div class="text-center py-20 text-slate-500">
+                        <i data-lucide="file-x" class="size-12 mx-auto mb-4 opacity-50"></i>
+                        <p>No blog posts found.</p>
+                    </div>
+                )}
             </div>
         </div>
     </section>
 
     <script slot="scripts">
-
-
         document.addEventListener('DOMContentLoaded', () => {
             const checkboxes = document.querySelectorAll('.category-checkbox')
-
+            
             checkboxes.forEach((checkbox) => {
                 checkbox.addEventListener('change', (e) => {
-                    console.log('Category changed:', e.target.id, e.target.checked)
+                    const target = e.target
+                    console.log('Category changed:', target.dataset.category, target.checked)
                 })
             })
         })

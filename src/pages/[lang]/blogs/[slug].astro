@@ -1,0 +1,265 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import { staticPaths } from '../../../utils/i18n'
+import content from '../../../features/Blogs/BlogPost/content.json'
+import { getBlogPostBySlug, blogPosts, categoryLabels } from '../../../features/Blogs/data'
+
+interface Props {
+    lang: 'en' | 'id'
+    slug: string
+}
+
+const { lang, slug } = Astro.params
+
+export function getStaticPaths() {
+    return [
+        { params: { lang: 'en', slug: 'getting-started-with-astro' } },
+        { params: { lang: 'id', slug: 'memulai-dengan-astro' } },
+    ]
+}
+
+if (lang !== 'en' && lang !== 'id') {
+    const BASE_URL = import.meta.env.BASE_URL
+    return Astro.redirect(`${BASE_URL}en/`)
+}
+
+const t = content[lang]
+const post = getBlogPostBySlug(slug, lang as 'en' | 'id')
+const BASE_URL = import.meta.env.BASE_URL
+
+const allPosts = blogPosts[lang as 'en' | 'id']
+const relatedPosts = allPosts
+    .filter((p) => p.slug !== slug && p.category === post?.category)
+    .slice(0, 3)
+---
+
+<Layout lang={lang} title={post?.title} description={post?.excerpt}>
+    <article class="min-h-screen mt-25">
+        {post ? (
+            <>
+                <header class="relative">
+                    {post.image && (
+                        <div class="absolute inset-0 h-80 overflow-hidden">
+                            <img
+                                src={post.image}
+                                alt={post.title}
+                                class="w-full h-full object-cover opacity-30"
+                            />
+                            <div class="absolute inset-0 bg-linear-to-b from-transparent via-black/50 to-black"></div>
+                        </div>
+                    )}
+                    
+                    <div class="relative w-full max-w-7xl mx-auto px-5 pt-10 pb-8">
+                        <a
+                            href={`${BASE_URL}${lang}/blogs`}
+                            class="inline-flex items-center gap-2 text-sky-500 hover:text-sky-400 transition-colors mb-8"
+                        >
+                            <i data-lucide="arrow-left" class="size-4"></i>
+                            {t.back_to_blogs}
+                        </a>
+
+                        <div class="space-y-4">
+                            <span class="inline-block px-3 py-1 text-xs font-medium text-sky-400 bg-sky-500/20 rounded-full border border-sky-500/30">
+                                {categoryLabels[post.category][lang as 'en' | 'id']}
+                            </span>
+
+                            <h1 class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent">
+                                {post.title}
+                            </h1>
+
+                            <div class="flex flex-wrap items-center gap-4 text-slate-400 text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="size-4"></i>
+                                    <span>{post.date}</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="clock" class="size-4"></i>
+                                    <span>{post.readTime}</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="size-4"></i>
+                                    <span>{t.written_by} Adi Aulia Rahman</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                {post.tags.map((tag) => (
+                                    <span class="text-xs text-slate-500 bg-slate-800/50 px-2 py-1 rounded">
+                                        #{tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="max-w-7xl mx-auto px-5 py-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                        <div class="lg:col-span-3">
+                            <aside class="lg:sticky lg:top-28 space-y-6">
+                                <div class="p-4 bg-black/30 backdrop-blur-xs rounded-xl border border-slate-800">
+                                    <h3 class="font-bold text-slate-300 mb-3 flex items-center gap-2">
+                                        <i data-lucide="list" class="size-4"></i>
+                                        {t.table_of_contents}
+                                    </h3>
+                                    <nav id="toc" class="space-y-2 text-sm">
+                                    </nav>
+                                </div>
+
+                                <div class="p-4 bg-black/30 backdrop-blur-xs rounded-xl border border-slate-800">
+                                    <h3 class="font-bold text-slate-300 mb-3">{t.share_article}</h3>
+                                    <div class="flex gap-2">
+                                        <button
+                                            id="share-twitter"
+                                            class="p-2 bg-slate-800 hover:bg-sky-600 rounded-lg transition-colors"
+                                            aria-label="Share on Twitter"
+                                        >
+                                            <i data-lucide="twitter" class="size-4"></i>
+                                        </button>
+                                        <button
+                                            id="share-linkedin"
+                                            class="p-2 bg-slate-800 hover:bg-blue-600 rounded-lg transition-colors"
+                                            aria-label="Share on LinkedIn"
+                                        >
+                                            <i data-lucide="linkedin" class="size-4"></i>
+                                        </button>
+                                        <button
+                                            id="share-copy"
+                                            class="p-2 bg-slate-800 hover:bg-green-600 rounded-lg transition-colors"
+                                            aria-label="Copy link"
+                                        >
+                                            <i data-lucide="link" class="size-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="lg:col-span-9">
+                            <div class="prose prose-invert prose-slate max-w-none
+                                prose-headings:font-anton prose-headings:text-slate-200
+                                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+                                prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+                                prose-p:text-slate-400 prose-p:leading-relaxed
+                                prose-a:text-sky-500 prose-a:no-underline hover:prose-a:underline
+                                prose-code:text-sky-400 prose-code:bg-slate-800/50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+                                prose-pre:bg-slate-900 prose-pre:border prose-pre:border-slate-800
+                                prose-blockquote:border-sky-500 prose-blockquote:bg-slate-800/30 prose-blockquote:py-1
+                                prose-ul:text-slate-400 prose-ol:text-slate-400
+                                prose-li:marker:text-sky-500"
+                                set:html={post.content.split('\n').map(line => {
+                                    if (line.startsWith('## ')) return `<h2>${line.replace('## ', '')}</h2>`
+                                    if (line.startsWith('### ')) return `<h3>${line.replace('### ', '')}</h3>`
+                                    if (line.startsWith('- ')) return `<li>${line.replace('- ', '')}</li>`
+                                    if (line.trim() === '') return ''
+                                    if (line.startsWith('```')) return line
+                                    return `<p>${line}</p>`
+                                }).join('')}
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {relatedPosts.length > 0 && (
+                    <section class="max-w-4xl mx-auto px-5 py-10 border-t border-slate-800">
+                        <h2 class="font-anton text-2xl text-slate-200 mb-6">{t.related_articles}</h2>
+                        <div class="grid gap-4 md:grid-cols-3">
+                            {relatedPosts.map((relatedPost) => (
+                                <a
+                                    href={`${BASE_URL}${lang}/blogs/${relatedPost.slug}`}
+                                    class="group p-4 bg-black/30 backdrop-blur-xs rounded-xl border border-slate-800 hover:border-sky-500/50 transition-all"
+                                >
+                                    <span class="text-xs text-sky-500 font-mono">
+                                        {categoryLabels[relatedPost.category][lang as 'en' | 'id']}
+                                    </span>
+                                    <h3 class="font-bold text-slate-200 mt-1 group-hover:text-sky-400 transition-colors">
+                                        {relatedPost.title}
+                                    </h3>
+                                    <p class="text-xs text-slate-500 mt-2">{relatedPost.date}</p>
+                                </a>
+                            ))}
+                        </div>
+                    </section>
+                )}
+            </>
+        ) : (
+            <div class="max-w-4xl mx-auto px-5 py-20 text-center">
+                <div class="bg-black/30 backdrop-blur-xs rounded-xl p-10 border border-slate-800">
+                    <i data-lucide="file-x" class="size-16 mx-auto text-slate-600 mb-4"></i>
+                    <h1 class="font-anton text-3xl text-slate-200 mb-4">{t.not_found}</h1>
+                    <p class="text-slate-400 mb-6">{t.not_found_message}</p>
+                    <a
+                        href={`${BASE_URL}${lang}/blogs`}
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-sky-600 hover:bg-sky-500 rounded-lg transition-colors"
+                    >
+                        <i data-lucide="arrow-left" class="size-4"></i>
+                        {t.back_to_blogs}
+                    </a>
+                </div>
+            </div>
+        )}
+    </article>
+
+    <script slot="scripts">
+        document.addEventListener('DOMContentLoaded', () => {
+            const tocNav = document.getElementById('toc')
+            const articleContent = document.querySelector('.prose')
+            
+            if (tocNav && articleContent) {
+                const headings = articleContent.querySelectorAll('h2, h3')
+                const tocList = document.createElement('ul')
+                tocList.className = 'space-y-1'
+                
+                headings.forEach((heading, index) => {
+                    const id = `heading-${index}`
+                    heading.id = id
+                    
+                    const li = document.createElement('li')
+                    const a = document.createElement('a')
+                    a.href = `#${id}`
+                    a.textContent = heading.textContent
+                    a.className = heading.tagName === 'H3' 
+                        ? 'block text-slate-500 hover:text-sky-400 pl-4 text-xs transition-colors'
+                        : 'block text-slate-400 hover:text-sky-400 text-sm transition-colors'
+                    
+                    li.appendChild(a)
+                    tocList.appendChild(li)
+                })
+                
+                tocNav.appendChild(tocList)
+            }
+
+            const shareTwitter = document.getElementById('share-twitter')
+            const shareLinkedin = document.getElementById('share-linkedin')
+            const shareCopy = document.getElementById('share-copy')
+            const pageUrl = window.location.href
+            const pageTitle = document.title
+
+            if (shareTwitter) {
+                shareTwitter.addEventListener('click', () => {
+                    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`, '_blank')
+                })
+            }
+
+            if (shareLinkedin) {
+                shareLinkedin.addEventListener('click', () => {
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`, '_blank')
+                })
+            }
+
+            if (shareCopy) {
+                shareCopy.addEventListener('click', async () => {
+                    await navigator.clipboard.writeText(pageUrl)
+                    const originalHTML = shareCopy.innerHTML
+                    shareCopy.innerHTML = '<i data-lucide="check" class="size-4"></i>'
+                    lucide.createIcons()
+                    setTimeout(() => {
+                        shareCopy.innerHTML = originalHTML
+                        lucide.createIcons()
+                    }, 2000)
+                })
+            }
+        })
+    </script>
+</Layout>

@@ -1,90 +1,55 @@
 ---
+import content from './content.json'
+import { blogPosts } from '../../Blogs/data'
 
+const { lang } = Astro.props as { lang: 'en' | 'id' }
+
+const t = content[lang]
+const BASE_URL = import.meta.env.BASE_URL
+const latestPosts = blogPosts[lang].slice(0, 3)
 ---
 
-<section class="pb-20 z-2 px-5 lg:px-30 mt-20">
+<section class="pb-20 z-2 px-5 lg:px-30 mt-20 scroll-reveal">
     <div class="w-full backdrop-blur rounded-3xl p-2 py-10 lg:p-5 lg:py-20 bg-black/20">
         <div class="grid lg:grid-cols-2">
             <div class="max-w-xl mb-16 mx-auto px-5">
-                <h2
-                    class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent"
-                >
-                    LATEST BLOGS
+                <h2 class="font-anton text-3xl lg:text-5xl bg-clip-text bg-linear-to-br from-white to-sky-500 text-transparent">
+                    {t.title}
                 </h2>
-                <p class="text-xs lg:text-base">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus tempora veritatis exercitationem
-                    accusamus doloribus impedit vel unde, quae provident, totam rerum distinctio soluta perferendis
-                    enim, incidunt ipsam amet? Deleniti, temporibus.
+                <p class="text-xs lg:text-base mt-4">
+                    {t.description}
                 </p>
             </div>
             <div>
                 <ul class="flex flex-col gap-2 divide-y divide-slate-700">
-                    <li>
-                        <a
-                            href=""
-                            class="flex p-2 lg:items-center justify-between hover:bg-linear-to-r from-sky-600/20 to-transparent"
+                    {latestPosts.map((post, index) => (
+                        <li 
+                            class="scroll-reveal"
+                            style={`animation-delay: ${index * 150}ms`}
                         >
-                            <div>
-                                 <h3 class="font-bold">Tutorial Laravel</h3>
-                                 <div class="flex items-center gap-2 text-slate-500 font-mono">
-                                     <i data-lucide="calendar" class="size-3"></i>
-                                     <span class="text-xs">23 Juni 2024</span>
-                                 </div>
-                                <p class="text-xs mt-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, autem?
-                                </p>
-                            </div>
-                            <div
-                                class="bg-sky-400/50 rounded-full text-sky-500 h-7 aspect-square flex border border-sky-500"
+                            <a
+                                href={`${BASE_URL}${lang}/blogs/${post.slug}`}
+                                class="flex p-2 lg:items-center justify-between hover:bg-linear-to-r from-sky-600/20 to-transparent transition-all duration-300 rounded-lg group"
                             >
-                                <i data-lucide="chevrons-right" class="size-5 m-auto"></i>
-                            </div>
-                        </a>
-                    </li>
-                   <li>
-                        <a
-                            href=""
-                            class="flex p-2 lg:items-center justify-between hover:bg-linear-to-r from-sky-600/20 to-transparent"
-                        >
-                            <div>
-                                 <h3 class="font-bold">Tutorial Laravel</h3>
-                                 <div class="flex items-center gap-2 text-slate-500 font-mono">
-                                     <i data-lucide="calendar" class="size-3"></i>
-                                     <span class="text-xs">23 Juni 2024</span>
-                                 </div>
-                                <p class="text-xs mt-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, autem?
-                                </p>
-                            </div>
-                            <div
-                                class="bg-sky-400/50 rounded-full text-sky-500 h-7 aspect-square flex border border-sky-500"
-                            >
-                                <i data-lucide="chevrons-right" class="size-5 m-auto"></i>
-                            </div>
-                        </a>
-                    </li>
-                  <li>
-                        <a
-                            href=""
-                            class="flex p-2 lg:items-center justify-between hover:bg-linear-to-r from-sky-600/20 to-transparent"
-                        >
-                            <div>
-                                 <h3 class="font-bold">Tutorial Laravel</h3>
-                                 <div class="flex items-center gap-2 text-slate-500 font-mono">
-                                     <i data-lucide="calendar" class="size-3"></i>
-                                     <span class="text-xs">23 Juni 2024</span>
-                                 </div>
-                                <p class="text-xs mt-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, autem?
-                                </p>
-                            </div>
-                            <div
-                                class="bg-sky-400/50 rounded-full text-sky-500 h-7 aspect-square flex border border-sky-500"
-                            >
-                                <i data-lucide="chevrons-right" class="size-5 m-auto"></i>
-                            </div>
-                        </a>
-                    </li>
+                                <div>
+                                    <h3 class="font-bold group-hover:text-sky-400 transition-colors">{post.title}</h3>
+                                    <div class="flex items-center gap-2 text-slate-500 font-mono">
+                                        <i data-lucide="calendar" class="size-3"></i>
+                                        <span class="text-xs">{post.date}</span>
+                                        <span class="text-xs text-sky-500">{post.readTime}</span>
+                                    </div>
+                                    <p class="text-xs mt-2 text-slate-400">
+                                        {post.excerpt}
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-sky-400/50 rounded-full text-sky-500 h-7 aspect-square flex border border-sky-500 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300"
+                                >
+                                    <i data-lucide="chevrons-right" class="size-5 m-auto"></i>
+                                </div>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>

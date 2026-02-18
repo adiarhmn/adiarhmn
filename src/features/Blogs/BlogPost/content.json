@@ -1,0 +1,20 @@
+{
+    "en": {
+        "back_to_blogs": "Back to Blogs",
+        "share_article": "Share Article",
+        "related_articles": "Related Articles",
+        "written_by": "Written by",
+        "table_of_contents": "Table of Contents",
+        "not_found": "Blog post not found",
+        "not_found_message": "The blog post you're looking for doesn't exist or has been removed."
+    },
+    "id": {
+        "back_to_blogs": "Kembali ke Blog",
+        "share_article": "Bagikan Artikel",
+        "related_articles": "Artikel Terkait",
+        "written_by": "Ditulis oleh",
+        "table_of_contents": "Daftar Isi",
+        "not_found": "Artikel tidak ditemukan",
+        "not_found_message": "Artikel yang Anda cari tidak ada atau telah dihapus."
+    }
+}

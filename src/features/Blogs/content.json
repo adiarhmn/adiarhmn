@@ -1,0 +1,24 @@
+{
+    "en": {
+        "title": "MY BLOGS",
+        "subtitle": "Explore my thoughts, tutorials, and insights about software development, technology, and IT consulting.",
+        "categories_title": "Categories",
+        "category_web_dev": "Web Development",
+        "category_mobile": "Mobile Development",
+        "category_backend": "Backend",
+        "category_tips": "Tips & Tricks",
+        "read_more": "Read More",
+        "by_author": "By Adi Aulia Rahman"
+    },
+    "id": {
+        "title": "BLOG SAYA",
+        "subtitle": "Jelajahi pemikiran, tutorial, dan wawasan saya tentang pengembangan perangkat lunak, teknologi, dan konsultasi IT.",
+        "categories_title": "Kategori",
+        "category_web_dev": "Pengembangan Web",
+        "category_mobile": "Pengembangan Mobile",
+        "category_backend": "Backend",
+        "category_tips": "Tips & Trik",
+        "read_more": "Baca Selengkapnya",
+        "by_author": "Oleh Adi Aulia Rahman"
+    }
+}

@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Utilities */
 @utility font-anton {
     font-family: 'Anton', sans-serif;
@@ -146,4 +151,185 @@
     to {
         transform: translateX(-50%);
     }
+}
+
+/* Scroll Reveal Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes blur-in {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-down {
+    animation: fade-in-down 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+    animation: fade-in-left 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+    animation: fade-in-right 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-blur-in {
+    animation: blur-in 0.8s ease-out forwards;
+}
+
+/* Scroll Reveal - Hidden State */
+.scroll-reveal {
+    opacity: 0;
+}
+
+.scroll-reveal.revealed {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+}
+
+.scroll-reveal-left.revealed {
+    animation: fade-in-left 0.8s ease-out forwards;
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+}
+
+.scroll-reveal-right.revealed {
+    animation: fade-in-right 0.8s ease-out forwards;
+}
+
+.scroll-reveal-scale {
+    opacity: 0;
+}
+
+.scroll-reveal-scale.revealed {
+    animation: scale-in 0.6s ease-out forwards;
+}
+
+/* Stagger Animation Delay Classes */
+.anim-delay-100 { animation-delay: 100ms; }
+.anim-delay-200 { animation-delay: 200ms; }
+.anim-delay-300 { animation-delay: 300ms; }
+.anim-delay-400 { animation-delay: 400ms; }
+.anim-delay-500 { animation-delay: 500ms; }
+.anim-delay-600 { animation-delay: 600ms; }
+.anim-delay-700 { animation-delay: 700ms; }
+.anim-delay-800 { animation-delay: 800ms; }
+
+/* Hero Entrance Animation */
+@keyframes hero-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-animate {
+    opacity: 0;
+    animation: hero-entrance 0.8s ease-out forwards;
+}
+
+/* Gradient Animation */
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
 }
