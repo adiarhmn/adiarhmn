@@ -1,93 +1,68 @@
-[![JetBrains Mono](https://img.shields.io/badge/Font-JetBrains%20Mono-blue?style=flat&logo=jetbrains)](https://www.jetbrains.com/lp/mono/)
+<h1 align="center">Adi Aulia Rahman</h1>
+<h3 align="center">Software Engineer • IT Consultant</h3>
 
-# 👋 Hi, I'm **Adi Aulia Rahman**
-
-### 🚀 Software Engineer & IT Consultant
-
-Welcome to my digital workspace! I build modern, scalable, and user‑friendly applications — from web apps, mobile apps, to complete IT solutions for businesses.
-
----
-
-## 🧑‍💻 About Me
-
-* 💼 Software Engineer & IT Consultant
-* 🎓 Cum Laude Graduate (GPA 3.96)
-* 🌐 Passionate about web, mobile, and system development
-* 💡 Love combining logic + creativity to build intuitive user experiences
-
-I enjoy turning ideas into real products — clean, fast, and reliable.
-
----
-
-## 🔧 Tech Stack
-
-### 🖥️ Frontend
-
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" width="28"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" width="28" />
-         
-</p>
-
-### 🛠 Backend
-
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="28" />
-</p>
-
-### 📱 Mobile
-
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/capacitor/capacitor-original-wordmark.svg" width="28" />
-         
-</p>
-
-### 🧰 Tools
-
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="28" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="28" />
+<p align="center">
+Scalable systems • Clean architecture • Performance-driven development
 </p>
 
 ---
 
-## 📂 Featured Projects
+## About
 
-### 🔹 **Professional Projects**
+Software Engineer and IT Consultant focused on building modern, maintainable, and user-centric applications across web, mobile, and backend systems.
 
-* Corporate systems
-* Company profiles
-* Custom dashboards
-* Internal apps
-
-### 🔹 **Personal Projects**
-
-* Experiments, UI explorations, full‑stack apps, and learning projects
-
-> Want to see more? Check out the **Projects** section on my portfolio.
+- Cum Laude Graduate — GPA 3.96  
+- Full-stack development & system architecture  
+- Performance and clean-code oriented  
+- Production-ready mindset  
 
 ---
 
-## 📬 Contact Me
+## Tech Stack
 
-Feel free to reach out if you'd like to collaborate or discuss a project!
+<p align="center">
 
-* ✉️ Email: **[adiauliarahman1@gmail.com](mailto:adiauliarahman1@gmail.com)**
-* 💼 LinkedIn: **linkedin.com/in/adi-aulia-rahman**
-* 🌐 Portfolio: **[https://adiauliarahman.dev](https://adiauliarahman.dev)**
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/capacitor/capacitor-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" width="22"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="22"/>
+
+</p>
 
 ---
 
-## 🤝 Let's Connect
+## Contact
 
-If you enjoy my work, feel free to ⭐ my repos, fork ideas, or get in touch!
+<p align="center">
+<a href="mailto:adiauliarahman1@gmail.com">Email</a> •
+<a href="https://linkedin.com/in/adi-aulia-rahman">LinkedIn</a> •
+<a href="https://adiauliarahman.dev">Portfolio</a>
+</p>
 
-> *"Code with purpose. Build with passion."*
+---
+
+<p align="center">
+Building efficient systems and scalable digital solutions.
+</p>
