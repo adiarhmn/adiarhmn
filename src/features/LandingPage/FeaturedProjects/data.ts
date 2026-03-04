@@ -20,7 +20,7 @@ export const FeaturedProjectsData: FeaturedProjectsDataInterface = {
                 'devicon-laravel-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/hosting-batuah-web',
+            link: 'https://hosting.batuah.tech',
         },
         {
             id: 'easy-ternak',
@@ -69,7 +69,7 @@ export const FeaturedProjectsData: FeaturedProjectsDataInterface = {
                 'devicon-laravel-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/hosting-batuah-web',
+            link: 'https://hosting.batuah.tech',
         },
         {
             id: 'easy-ternak',
