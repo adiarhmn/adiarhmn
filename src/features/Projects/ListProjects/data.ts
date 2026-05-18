@@ -9,6 +9,18 @@ export const data: ListAllProject = {
     // ID DATA
     id: [
         {
+            id: 'link-pembelajaran-bahasa-arab',
+            year: 'Sep 2025 - Oct 2025',
+            image: '/projects/link-pembelajaran-bahasa-arab/cover.png',
+            title: 'Link Pembelajaran Bahasa Arab',
+            desc: 'Pengembangan website pembelajaran bahasa arab dengan fitur latihan soal, kuis, dan materi.',
+            stackIcons: [
+                'devicon-astro-plain colored',
+                'devicon-tailwindcss-plain colored',
+            ],
+            link: 'https://fuadrahman.vortala.my.id',
+        },
+        {
             id: 'hosting-batuah',
             year: 'Sep 2025 - Oct 2025',
             image: '/projects/hosting-batuah/cover.png',
@@ -19,7 +31,7 @@ export const data: ListAllProject = {
                 'devicon-laravel-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/hosting-batuah-web',
+            link: 'https://hosting.batuah.id',
         },
         {
             id: 'easy-ternak',
@@ -34,7 +46,7 @@ export const data: ListAllProject = {
                 'devicon-capacitor-plain colored',
                 'devicon-android-plain colored',
             ],
-            link: 'projects/easy-ternak',
+            // link: 'projects/easy-ternak',
         },
         {
             id: 'eduwisata',
@@ -47,7 +59,7 @@ export const data: ListAllProject = {
                 'devicon-azuresqldatabase-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/eduwisata-toga',
+            // link: 'projects/eduwisata-toga',
         },
         {
             id: 'marketplace',
@@ -55,7 +67,7 @@ export const data: ListAllProject = {
             title: 'ICT Marketplace',
             desc: 'Platform marketplace untuk penjualan dan pengelolaan produk teknologi informasi dan komunikasi (ICT).',
             image: '/projects/ict-marketplace/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-laravel-plain colored',
                 'devicon-azuresqldatabase-plain colored',
@@ -68,7 +80,7 @@ export const data: ListAllProject = {
             title: 'TEFA KPI',
             desc: 'Aplikasi web dan mobile untuk pengelolaan serta monitoring Key Performance Indicator (KPI) TEFA.',
             image: '/projects/tefa-kpi/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-react-plain colored',
                 'devicon-capacitor-plain colored',
@@ -82,7 +94,7 @@ export const data: ListAllProject = {
             title: 'E-Commerce Raja Ikan',
             desc: 'Aplikasi web e-commerce untuk penjualan produk perikanan Raja Ikan secara online.',
             image: '/projects/raja-ikan/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-codeigniter-plain colored',
                 'devicon-bootstrap-plain colored',
@@ -95,14 +107,14 @@ export const data: ListAllProject = {
             title: 'Presensi Ujian Politala',
             desc: 'Aplikasi web untuk pencatatan dan pengelolaan kehadiran peserta ujian di Politala.',
             image: '/projects/presensi-ujian-politala/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-laravel-plain colored',
                 'devicon-bootstrap-plain colored',
                 'devicon-azuresqldatabase-plain colored',
             ],
         },
-          {
+        {
             id: 'wa-gateway-api',
             year: 'Okt 2024 - Jan 2025',
             title: 'WA Gateway API',
@@ -127,10 +139,35 @@ export const data: ListAllProject = {
                 'devicon-azuresqldatabase-plain colored',
             ],
         },
+        {
+            id: 'adidev-host',
+            year: 'Jan 2025 - Present',
+            title: 'AdiDev Host',
+            desc: 'Platform hosting yang handal untuk kebutuhan web Anda.',
+            image: '/projects/coming-soon.png',
+            stackIcons: [
+                'devicon-laravel-plain colored',
+                'devicon-vuejs-plain colored',
+                'devicon-tailwindcss-plain colored',
+                'devicon-azuresqldatabase-plain colored',
+            ],
+        },
     ],
 
     // EN DATA
     en: [
+        {
+            id: 'link-pembelajaran-bahasa-arab',
+            year: 'Sep 2025 - Oct 2025',
+            image: '/projects/link-pembelajaran-bahasa-arab/cover.png',
+            title: 'Arabic Learning Link',
+            desc: 'Developing a website for learning Arabic with features for exercises, quizzes, and materials.',
+            stackIcons: [
+                'devicon-astro-plain colored',
+                'devicon-tailwindcss-plain colored',
+            ],
+            link: 'https://fuadrahman.vortala.my.id',
+        },
         {
             id: 'hosting-batuah',
             year: 'Sep 2025 - Oct 2025',
@@ -142,7 +179,7 @@ export const data: ListAllProject = {
                 'devicon-laravel-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/hosting-batuah-web',
+            link: 'https://hosting.batuah.id',
         },
         {
             id: 'easy-ternak',
@@ -157,7 +194,7 @@ export const data: ListAllProject = {
                 'devicon-capacitor-plain colored',
                 'devicon-android-plain colored',
             ],
-            link: 'projects/easy-ternak',
+            // link: 'projects/easy-ternak',
         },
         {
             id: 'eduwisata',
@@ -170,7 +207,7 @@ export const data: ListAllProject = {
                 'devicon-azuresqldatabase-plain colored',
                 'devicon-tailwindcss-plain colored',
             ],
-            link: 'projects/eduwisata-toga',
+            // link: 'projects/eduwisata-toga',
         },
         {
             id: 'marketplace',
@@ -178,7 +215,7 @@ export const data: ListAllProject = {
             title: 'ICT Marketplace',
             desc: 'A marketplace platform for ICT products.',
             image: '/projects/ict-marketplace/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-laravel-plain colored',
                 'devicon-azuresqldatabase-plain colored',
@@ -191,7 +228,7 @@ export const data: ListAllProject = {
             title: 'TEFA KPI',
             desc: 'A web and mobile application for Tefa KPI.',
             image: '/projects/tefa-kpi/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-react-plain colored',
                 'devicon-capacitor-plain colored',
@@ -205,7 +242,7 @@ export const data: ListAllProject = {
             title: 'Web E-Commerce Raja Ikan',
             desc: 'A web application for Raja Ikan E-Commerce.',
             image: '/projects/raja-ikan/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-codeigniter-plain colored',
                 'devicon-bootstrap-plain colored',
@@ -218,7 +255,7 @@ export const data: ListAllProject = {
             title: 'Politala Exam Attendance',
             desc: 'A web application for Politala Exam Attendance.',
             image: '/projects/presensi-ujian-politala/cover.png',
-            link: 'projects/ict-marketplace',
+            // link: 'projects/ict-marketplace',
             stackIcons: [
                 'devicon-laravel-plain colored',
                 'devicon-bootstrap-plain colored',
@@ -249,6 +286,14 @@ export const data: ListAllProject = {
                 'devicon-tailwindcss-plain colored',
                 'devicon-azuresqldatabase-plain colored',
             ],
+        },
+        {
+            id: 'adidev-host',
+            year: 'Jan 2025 - Present',
+            title: 'AdiDev Host',
+            desc: 'Your reliable partner for web hosting solutions. Focused on speed, security, and exceptional support.',
+            image: '/projects/coming-soon.png',
+            // link: 'projects/ict-marketplace',
         },
     ],
 }
