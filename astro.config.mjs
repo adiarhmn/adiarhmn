@@ -11,7 +11,7 @@ const BASE_URL = '/'
 // const BASE_URL = '/adiauliarahman.dev/';
 
 // const SITE = 'https://adiarhmn.github.io';
-const SITE = 'https://adiauliarahman.dev/'
+const SITE = 'https://adiauliarahman.my.id/'
 
 // https://astro.build/config
 export default defineConfig({
