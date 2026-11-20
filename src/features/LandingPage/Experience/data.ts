@@ -15,11 +15,27 @@ export interface Experience {
 export const ExperienceData: Record<Lang, Experience[]> = {
     id: [
         {
+            company: 'PT. Barito Berlian Motor',
+            type: 'work',
+            items: [
+                {
+                    role: 'IT Programmer',
+                    year: 'Jul 2026 - Sekarang',
+                    desc: 'Mengembangkan dan memelihara sistem perusahaan diantaranya, Sistem Recruitment Mitsubishi, Sistem Monitoring Kendaraan Berbasis OCR Plat Recognition, Sistem CRM Dealer, Sistem Accounting Receivable, Sistem Accounting Payable, dan Sistem Faktur Pajak.',
+                },
+                {
+                    role: 'IT Support',
+                    year: 'Okt 2023 - Sekarang',
+                    desc: 'Mengkonfigurasi dan melakukan pemasangan jaringan di 2 kantor cabang mitsubishi, di Palangka Raya dan Katingan. Melakukan konfigurasi Komputer untuk kantor cabang.',
+                },
+            ],
+        },
+        {
             company: 'CV. Batuah Teknologi Semesta',
             type: 'work',
             items: [
                 {
-                    role: 'Web Developer',
+                    role: 'IT Programmer',
                     year: 'Okt 2023 - Sekarang',
                     desc: 'Merancang dan memelihara website klien serta alat internal perusahaan menggunakan Laravel, FilamentPHP, dan TailwindCSS. Memimpin pengembangan "Hosting Batuah", sebuah platform manajemen hosting yang menyederhanakan operasional perusahaan dan meningkatkan kemampuan layanan mandiri bagi klien.',
                 },
@@ -72,6 +88,22 @@ export const ExperienceData: Record<Lang, Experience[]> = {
 
     // EN DATA
     en: [
+        {
+            company: 'PT. Barito Berlian Motor',
+            type: 'work',
+            items: [
+                {
+                    role: 'IT Programmer',
+                    year: 'Jul 2026 - Present',
+                    desc: 'Developing and maintaining various company systems, including Mitsubishi Recruitment System, Vehicle Monitoring System with OCR-Based License Plate Recognition, Dealer CRM System, Accounts Receivable (AR) System, Accounts Payable (AP) System, and Tax Invoice System.',
+                },
+                {
+                    role: 'IT Support',
+                    year: 'Oct 2023 - Present',
+                    desc: 'Configured and installed network infrastructure across two Mitsubishi branch offices in Palangka Raya and Katingan. Also responsible for configuring and maintaining computer systems to support daily office operations.',
+                },
+            ],
+        },
         {
             company: 'CV. Batuah Teknologi Semesta',
             type: 'work',
